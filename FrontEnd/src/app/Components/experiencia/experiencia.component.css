@@ -1,0 +1,9 @@
+.list-group-flush{
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+    margin-top: .5rem;
+} 
+
+#experiencia{
+    border-top: .05rem outset rgba(130, 128, 150, 0.447);
+}

@@ -1,0 +1,10 @@
+.list-group-flush{
+    padding-left: 0.75rem;
+    padding-top: 1rem;
+}
+.container{
+    max-width: 100%;
+}
+#educacion{
+    border-top: .05rem outset rgba(130, 128, 150, 0.447);
+}

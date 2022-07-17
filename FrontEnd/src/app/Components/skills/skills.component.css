@@ -1,0 +1,19 @@
+#skills{
+    border-top: .05rem outset rgba(130, 128, 150, 0.447);
+}
+.row{
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+small{
+    display: block;
+}
+.col{
+    text-align: center;
+}
+
+.title{
+    padding: 0.8rem;
+}

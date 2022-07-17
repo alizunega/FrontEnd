@@ -1,0 +1,29 @@
+@media (max-width: 767.98px) { 
+    #foto-perfil{
+        width: 50%;
+        height: 30%;
+        margin: auto;
+        display: block;
+    } 
+    #nombre{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+}
+#foto-perfil{
+    width: 100%;
+    max-width: 200px;
+    border-radius: 30%;
+    height: auto;
+    box-shadow: 0.6rem 0.6rem 3rem rgb(104, 102, 102);
+    
+    
+}
+h2{
+    padding-top: 1rem;
+}
+#nombre{
+    padding-top: 1rem
+}

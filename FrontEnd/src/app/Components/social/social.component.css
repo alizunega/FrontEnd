@@ -1,0 +1,12 @@
+.list-group-item{
+    border: 0;
+}
+a{
+    text-align: center;
+    text-decoration: none;
+}
+
+i{
+    font-size: 1.8rem;
+    color: white;
+}
