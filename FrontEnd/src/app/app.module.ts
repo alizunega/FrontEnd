@@ -17,6 +17,8 @@ import { SkillsComponent } from './Components/skills/skills.component';
 import { PercentPipe } from '@angular/common';
 import { FooterComponent } from './Components/footer/footer.component';
 import { ProyectosComponent } from './Components/proyectos/proyectos.component';
+import { HomeComponent } from './Components/home/home.component';
+import { LoginComponent } from './Components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { ProyectosComponent } from './Components/proyectos/proyectos.component';
     SkillsComponent,
     FooterComponent,
     ProyectosComponent,
+    HomeComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
