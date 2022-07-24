@@ -1,12 +1,19 @@
 .list-group-item{
     border: 0;
+    text-align: center;
+    background-color: #445067;
+    color: white;
 }
 a{
     text-align: center;
-    text-decoration: none;
+    color: white;
 }
 
 i{
     font-size: 1.8rem;
     color: white;
+}
+button{
+    padding: 1rem;
+    margin: 0.6rem;
 }
