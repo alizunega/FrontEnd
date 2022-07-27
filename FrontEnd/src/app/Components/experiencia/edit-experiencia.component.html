@@ -1,0 +1,31 @@
+<div class="container-fluid" *ngIf="expLab">
+    <div class="row w-50">
+        <div>
+            <form #form="ngForm" (ngSubmit)="onUpdate()" novalidate >
+                <div class="form-control">
+                    <label for="nombreE">Nombre Empresa</label>
+                    <input type="text" id="nombreE" name="nombreE" [(ngModel)]="expLab.nombreE" required />
+                </div>
+                <div class="form-control">
+                    <label for="descripcionE">Descripción del empleo</label>
+                    <input type="text" id="descripcionE" name="descripcionE" [(ngModel)]="expLab.descripcionE" required />
+                </div>
+                <div class="form-control">
+                    <label for="fInicio">Fecha Inicio</label>
+                    <input type="date" id="fInicio" name="fInicio" [(ngModel)]="expLab.fInicio" required />
+                </div>
+                <div class="form-control">
+                    <label for="fFin">Fecha Fin <small>(Dejar vacio si es actual*)</small></label>
+                    <input type="date" id="fFin" name="fFin" [(ngModel)]="expLab.fFin"/>
+                </div>
+                <div class="form-control">
+                    <button class="btn btn-md btn-secondary" (click)="onUpdate()"> Actualizar </button>
+                    <button class="btn btn-md btn-outline-primary" routerLink="/#"> Volver sin cambios </button>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+
+</div>
+

@@ -1,5 +1,5 @@
 @media (max-width: 767.98px) { 
-    #foto-perfil{
+    .foto-perfil{
         width: 50%;
         height: 30%;
         margin: auto;
@@ -12,14 +12,12 @@
         justify-content: center;
     }
 }
-#foto-perfil{
+.foto-perfil{
     width: 100%;
     max-width: 200px;
     border-radius: 30%;
     height: auto;
     box-shadow: 0.6rem 0.6rem 3rem rgb(104, 102, 102);
-    
-    
 }
 h2{
     padding-top: 1rem;

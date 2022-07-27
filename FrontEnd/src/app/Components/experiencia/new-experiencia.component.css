@@ -1,0 +1,20 @@
+.container-fluid {
+    justify-content: center;
+    align-items: center;
+}
+
+.row {
+    position: absolute;
+    top: 50%;
+    transform: translate(50%, -50%);
+}
+
+input{
+    position: relative;
+    margin: 1rem;
+    justify-content: left;
+}
+
+.botones{
+    justify-content: space-evenly;
+}

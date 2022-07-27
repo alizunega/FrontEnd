@@ -1,46 +1,32 @@
 <div class=".container-fluid" id="experiencia">
-    <div class="list-group-flush w-90">
-      <div class="row">
-        <div class="col text-start"><h1>Experiencia</h1></div>
-        <div class="col text-end">
-          <a
-            href="#"
-            class="btn btn-sm btn-outline-secondary bi bi-pencil-square"> Editar
-          </a>
-        </div>
+  <div class="list-group-flush w-90">
+    <div class="row">
+      <div class="col text-start">
+        <h1>Experiencia Laboral</h1>
       </div>
-  
-      <div class="list-group-item">
-        <h2>Experiencia 1</h2>
-  
-        <h3>años</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est,
-          praesentium! Deleniti temporibus placeat aliquid quas delectus. Quaerat
-          molestiae asperiores doloremque neque tempora necessitatibus sapiente,
-          illo architecto dolore labore reiciendis ullam?
-        </p>
-      </div>
-      <div class="list-group-item">
-        <h2>Experiencia 2</h2>
-        <h3>años</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est,
-          praesentium! Deleniti temporibus placeat aliquid quas delectus. Quaerat
-          molestiae asperiores doloremque neque tempora necessitatibus sapiente,
-          illo architecto dolore labore reiciendis ullam?
-        </p>
-      </div>
-      <div class="list-group-item">
-        <h2>Experiencia 3</h2>
-        <h3>años</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est,
-          praesentium! Deleniti temporibus placeat aliquid quas delectus. Quaerat
-          molestiae asperiores doloremque neque tempora necessitatibus sapiente,
-          illo architecto dolore labore reiciendis ullam?
-        </p>
+      <div class="col text-end">
+        <button
+          type="button"
+          class="btn btn-sm btn-outline-secondary bi bi-plus-square"
+          routerLink="/nuevaexp"
+          *ngIf="isLogged"
+        >
+          Agregar
+        </button>
       </div>
     </div>
+
+    <div class="list-group-item ">
+      <ul>
+        <li *ngFor="let Experiencia of expe">
+          <h4>{{ Experiencia.nombreE }}</h4>
+          <h5>{{ Experiencia.fInicio }}</h5>
+          <h5>{{ Experiencia.fFin }}</h5>
+          <p>{{ Experiencia.descripcionE }}</p>
+          <button *ngIf="isLogged" class="bi bi-pencil btn btn-outline-dark mx-1" routerLink="/editExpe/{{Experiencia.id}}"> Editar</button>
+          <button *ngIf="isLogged" class="bi bi-trash3-fill btn btn-outline-danger" (click)="delete(Experiencia.id)"> Borrar</button>
+        </li>
+      </ul>
+    </div>
   </div>
-  
+</div>

@@ -22,6 +22,8 @@ import { ProyectosComponent } from './Components/proyectos/proyectos.component';
 import { HomeComponent } from './Components/home/home.component';
 import { LoginComponent } from './Components/login/login.component';
 import { InterceptorService } from './service/interceptor-service';
+import { NewExperienciaComponent } from './Components/experiencia/new-experiencia.component';
+import { EditExperienciaComponent } from './Components/experiencia/edit-experiencia.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +40,8 @@ import { InterceptorService } from './service/interceptor-service';
     ProyectosComponent,
     HomeComponent,
     LoginComponent,
+    NewExperienciaComponent,
+    EditExperienciaComponent,
   ],
   imports: [
     BrowserModule,
