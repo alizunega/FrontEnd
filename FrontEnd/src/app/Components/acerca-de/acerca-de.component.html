@@ -1,37 +1,50 @@
-<div class="container-fluid" id="acerca-de">
-    <div class="row no-gutters mb-2 pb-1" >
-      
-      <!-- columna foto -->
-      <div class="col-xs-12 col-sm-6 col-md-5 col-lg-3 no-gutters">
-        <!-- img = '../../../assets/perfil1.JPG' y   
-              src = img -->
-        <img
-          class="rounded-3 img-fluid foto-perfil"
-          id="persona.img"
-          [name]="persona.img"
-          src= {{persona.img}}
-          alt="Foto Perfil"
-          
-        />
-        
-      </div>
-      <!-- columna nombre y titulo -->
-      <div class="col-sm-12 col-md-4 col-lg-3 no-gutters" id="encabezado">
-        <div class="row ">
-          <h3 id="nombre"> {{persona.nombre}} </h3>
-          <h3 d="apellido">{{persona.apellido}}</h3>
-        </div>
-        
-        <h4>FullStack Developer Jr</h4>
-      </div>
-      <!-- columna acerca de mi -->
-      <div class="col-auto col-sm-auto col-lg-6 no-gutters" id="about">
-        <h2>Acerca de mi:</h2>
-        <p>{{persona.about}}</p>
-        <button type="button" class="btn btn-sm btn-outline-secondary bi bi-pencil-square" *ngIf="isLogged"> Editar</button>
-  
-      </div>
-      
+<div class="container-fluid" *ngIf="persona">
+  <div class="row no-gutters mb-2 pb-1">
+    <!-- columna foto -->
+    <div class="col d-inline-block position-relative">
+      <img
+        class="img-fluid foto-perfil"
+        id="img"
+        name="img"
+        src="{{ persona.img }}"
+        alt="Foto Perfil"
+      />
+      <button
+        type="button"
+        id="btn-img"
+        class="btn btn-xs btn-outline-secondary bi bi-pencil-square"
+        *ngIf="isLogged"
+        routerLink="/editAbout/{{ persona.id }}"
+      ></button>
+    </div>
+
+    <!-- columna nombre y titulo -->
+    <div class="col">
+      <h3 id="nombre" name="nombre">{{ persona.nombre }} {{ persona.apellido }}</h3>
+      <h5>FullStack Developer Jr</h5>
+      <button
+        type="button"
+        class="btn btn-xs btn-outline-secondary bi bi-pencil-square"
+        *ngIf="isLogged"
+        routerLink="/editAbout/{{ persona.id}}"
+      ></button>
+
+    </div>
+    <!-- columna acerca de mi -->
+    <div class="col">
+      <h2>Acerca de mi:</h2>
+      <p id="about">{{ persona.about }}</p>
+      <button
+        type="button"
+        class="btn btn-sm btn-outline-secondary bi bi-pencil-square"
+        *ngIf="isLogged"
+        routerLink="/editAbout/{{ persona.id }}"
+      ></button>
     </div>
   </div>
+
+
   
+  
+  
+</div>

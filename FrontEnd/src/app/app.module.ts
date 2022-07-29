@@ -24,6 +24,9 @@ import { LoginComponent } from './Components/login/login.component';
 import { InterceptorService } from './service/interceptor-service';
 import { NewExperienciaComponent } from './Components/experiencia/new-experiencia.component';
 import { EditExperienciaComponent } from './Components/experiencia/edit-experiencia.component';
+import { NewEducacionComponent } from './Components/educacion/new-educacion.component';
+import { EditEducacionComponent } from './Components/educacion/edit-educacion.component';
+import { EditAcercaDeComponent } from './Components/acerca-de/edit-acerca-de.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +45,9 @@ import { EditExperienciaComponent } from './Components/experiencia/edit-experien
     LoginComponent,
     NewExperienciaComponent,
     EditExperienciaComponent,
+    NewEducacionComponent,
+    EditEducacionComponent,
+    EditAcercaDeComponent
   ],
   imports: [
     BrowserModule,

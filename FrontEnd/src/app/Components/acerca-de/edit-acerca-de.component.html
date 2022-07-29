@@ -1,0 +1,24 @@
+<div class="container-fluid" *ngIf="persona">
+
+    <form #form="ngForm" (ngSubmit)="onUpdate()" novalidate>
+        <div class="form-control">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" [(ngModel)]="persona.nombre" required />
+        </div>
+        <div class="form-control">
+            <label for="apellido">Apellido</label>
+            <input type="text" id="apellido" name="apellido" [(ngModel)]="persona.apellido" required />
+        </div>
+        <div class="form-control">
+            <label for="about">Acerca de...</label>
+            <input type="text" id="about" name="about" [(ngModel)]="persona.about" required />
+        </div>
+        
+
+        <div class="form-control">
+            <button type="submit" class="btn btn-md btn-secondary" (ngSubmit)="onUpdate()"> Actualizar </button>
+            <button class="btn btn-md btn-outline-primary" routerLink="/#"> Volver sin cambios </button>
+        </div>
+    </form>
+</div>
+

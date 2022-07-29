@@ -15,13 +15,17 @@
 .foto-perfil{
     width: 100%;
     max-width: 200px;
-    border-radius: 30%;
     height: auto;
     box-shadow: 0.6rem 0.6rem 3rem rgb(104, 102, 102);
 }
-h2{
+h5,h3{
     padding-top: 1rem;
 }
-#nombre{
-    padding-top: 1rem
+
+#btn-img{
+    position: absolute; 
+    bottom: 0; 
+    left: 50%; 
+
+
 }

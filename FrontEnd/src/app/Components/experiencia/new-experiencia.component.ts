@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { SExperienciaService } from 'src/app/service/s-experiencia.service';
 import { Experiencia } from 'src/app/model/experiencia';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-new-experiencia',
@@ -11,8 +12,8 @@ import { Experiencia } from 'src/app/model/experiencia';
 export class NewExperienciaComponent implements OnInit {
   nombreE: string = '';
   descripcionE: string = '';
-  fInicio: Date = new Date();
-  fFin: Date = new Date();
+  fInicio: string = '';
+  fFin: string = '';
 
   constructor(private sExperiencia: SExperienciaService, private router: Router) { }
 

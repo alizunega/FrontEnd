@@ -1,0 +1,32 @@
+<div class="container-fluid" *ngIf="educ">
+    <div class="row w-50">
+        <div>
+            <form #form="ngForm" (ngSubmit)="onUpdate()" novalidate >
+                <div class="form-control">
+                    <label for="titulo">Título</label>
+                    <input type="text" id="titulo" name="titulo" [(ngModel)]="educ.titulo" required />
+                </div>
+                <div class="form-control">
+                    <label for="nombreInstitucion">Nombre Institucion</label>
+                    <input type="text" id="nombreInstitucion" name="nombreInstitucion" [(ngModel)]="educ.nombreInstitucion" required />
+                </div>
+                <div class="form-control">
+                    <label for="fInicio">Fecha Inicio</label>
+                    <input type="text" id="fInicio" name="fInicio" [(ngModel)]="educ.fInicio" required />
+                </div>
+                <div class="form-control">
+                    <label for="fFin">Fecha Fin <small>(Dejar vacio si es actual*)</small></label>
+                    <input type="text" id="fFin" name="fFin" [(ngModel)]="educ.fFin"/>
+                </div>
+                <div class="form-control">
+                    <button class="btn btn-md btn-secondary" (click)="onUpdate()"> Actualizar </button>
+                    <button class="btn btn-md btn-outline-primary" routerLink="/#"> Volver sin cambios </button>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+
+</div>
+
+

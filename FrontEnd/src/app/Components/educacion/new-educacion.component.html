@@ -3,29 +3,30 @@
         <div>
             <form #form="ngForm" (ngSubmit)="onCreate()" novalidate >
                 <div class="form-control">
-                    <label for="nombreE">Nombre Empresa</label>
-                    <input type="text" id="nombreE" name="nombreE" [(ngModel)]="nombreE" required />
+                    <label for="titulo">Titulo</label>
+                    <input type="text" id="titulo" name="titulo" [(ngModel)]="titulo" required />
                 </div>
                 <div class="form-control">
-                    <label for="descripcionE">Descripción del empleo</label>
-                    <input type="text" id="descripcionE" name="descripcionE" [(ngModel)]="descripcionE" required />
+                    <label for="nombreInstitucion">Nombre Institucion</label>
+                    <input type="text" id="nombreInstitucion" name="nombreInstitucion" [(ngModel)]="nombreInstitucion" required />
                 </div>
                 <div class="form-control">
                     <label for="fInicio">Fecha Inicio</label>
                     <input type="text" id="fInicio" name="fInicio" [(ngModel)]="fInicio" required />
-                    <span>Formato mm-aaaa</span>
+                    
                 </div>
                 <div class="form-control">
                     <label for="fFin">Fecha Fin <small>(Dejar vacio si es actual)*</small></label>
                     <input type="text" id="fFin" name="fFin" [(ngModel)]="fFin"/>
-                    <small>Formato mm-aaaa</small>
                 </div>
                 <div class="form-control">
                     <button class="btn btn-md btn-secondary" type="submit"> Agregar</button>
                     <button class="btn btn-md btn-outline-primary" routerLink="/#"> Volver a inicio</button>
                 </div>
+                
             </form>
         </div>
     </div>
 
 </div>
+

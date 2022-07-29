@@ -1,23 +1,43 @@
 <div class="list-group bg-dark d-flex flex-row">
-    <a
-      href="https://github.com/alizunega" target="_blank"
-      class="list-group-item list-group-item-action bg-dark"
-    >
-      <i class="bi bi-github btn btn-outline-secondary"></i>
-    </a>
-    <a
-      href="https://www.linkedin.com/in/alicialzunegamza" target="_blank"
-      class="list-group-item list-group-item-action bg-dark"
-    >
-      <i class="bi bi-linkedin btn btn-outline-secondary"></i>
-    </a>
-    <a
-      href="https://t.me/AlitaZ16" target="_blank"
-      class="list-group-item list-group-item-action bg-dark"
-    >
-      <i class="bi bi-telegram btn btn-outline-secondary"></i>
-    </a>
-      <button (click)="login()" class="bi bi-box-arrow-in-left btn btn-dark btn-outline-secondary list-group-item list-group-item-action" *ngIf="!isLogged"> Ingresar</button>
-      <button (click)="onLogOut()" class="bi bi-box-arrow-in-right btn btn-dark btn-outline-secondary list-group-item list-group-item-action" *ngIf="isLogged"> Salir</button>     
-  </div>
-  
+  <a
+    href="https://github.com/alizunega"
+    target="_blank"
+    class="list-group-item list-group-item-action bg-dark"
+  >
+    <i class="bi bi-github btn btn-outline-secondary"></i>
+  </a>
+  <a
+    href="https://www.linkedin.com/in/alicialzunegamza"
+    target="_blank"
+    class="list-group-item list-group-item-action bg-dark"
+  >
+    <i class="bi bi-linkedin btn btn-outline-secondary"></i>
+  </a>
+  <a
+    href="https://t.me/AlitaZ16"
+    target="_blank"
+    class="list-group-item list-group-item-action bg-dark"
+  >
+    <i class="bi bi-telegram btn btn-outline-secondary"></i>
+  </a>
+  <a
+    href="mailto:alizunega84@gmail.com"
+    target="_blank"
+    class="list-group-item list-group-item-action bg-dark"
+    ><i class="bi bi-envelope btn btn-outline-secondary"></i
+  ></a>
+  <button
+    (click)="login()"
+    class="bi bi-box-arrow-in-left btn btn-outline-secondary list-group-item list-group-item-action"
+    *ngIf="!isLogged"
+  >
+    Ingresar
+  </button>
+  <button
+    (click)="onLogOut()"
+    class="bi bi-box-arrow-in-right btn btn-outline-secondary list-group-item list-group-item-action"
+    *ngIf="isLogged"
+  >
+    Salir
+  </button>
+</div>

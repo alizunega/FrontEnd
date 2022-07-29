@@ -12,9 +12,11 @@ export class PersonaService {
   constructor(private httpClient: HttpClient) { }
 
   public getPersona(): Observable<Persona> {
-
-    return this.httpClient.get<Persona>(this.URL+'traer/perfil');
-
+    return this.httpClient.get<Persona>(this.URL + `traer/perfil`);
+  }
+  
+  public update(id:number, persona: Persona): Observable<any>{
+    return this.httpClient.put<any>(this.URL + `update/${id}`, persona);
   }
 
 }

@@ -20,8 +20,7 @@
       <ul>
         <li *ngFor="let Experiencia of expe">
           <h4>{{ Experiencia.nombreE }}</h4>
-          <h5>{{ Experiencia.fInicio }}</h5>
-          <h5>{{ Experiencia.fFin }}</h5>
+          <p>{{ Experiencia.fInicio }} - {{ Experiencia.fFin }}</p>
           <p>{{ Experiencia.descripcionE }}</p>
           <button *ngIf="isLogged" class="bi bi-pencil btn btn-outline-dark mx-1" routerLink="/editExpe/{{Experiencia.id}}"> Editar</button>
           <button *ngIf="isLogged" class="bi bi-trash3-fill btn btn-outline-danger" (click)="delete(Experiencia.id)"> Borrar</button>

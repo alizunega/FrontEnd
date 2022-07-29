@@ -12,14 +12,15 @@
                 </div>
                 <div class="form-control">
                     <label for="fInicio">Fecha Inicio</label>
-                    <input type="date" id="fInicio" name="fInicio" [(ngModel)]="expLab.fInicio" required />
+                    <input type="text" id="fInicio" name="fInicio" [(ngModel)]="expLab.fInicio" required /> 
+                    <span>formato dd-mm-aaaa</span>
                 </div>
                 <div class="form-control">
                     <label for="fFin">Fecha Fin <small>(Dejar vacio si es actual*)</small></label>
-                    <input type="date" id="fFin" name="fFin" [(ngModel)]="expLab.fFin"/>
+                    <input type="text" id="fFin" name="fFin" [(ngModel)]="expLab.fFin"/><span>formato dd-mm-aaaa</span>
                 </div>
                 <div class="form-control">
-                    <button class="btn btn-md btn-secondary" (click)="onUpdate()"> Actualizar </button>
+                    <button type="submit" class="btn btn-md btn-secondary" (click)="onUpdate()"> Actualizar </button>
                     <button class="btn btn-md btn-outline-primary" routerLink="/#"> Volver sin cambios </button>
                 </div>
                 
