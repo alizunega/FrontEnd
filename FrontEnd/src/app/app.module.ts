@@ -8,6 +8,7 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+
 import { HeaderComponent } from './Components/header/header.component';
 import { LogoApComponent } from './Components/logo-ap/logo-ap.component';
 import { BannerComponent } from './Components/banner/banner.component';
@@ -27,6 +28,7 @@ import { EditExperienciaComponent } from './Components/experiencia/edit-experien
 import { NewEducacionComponent } from './Components/educacion/new-educacion.component';
 import { EditEducacionComponent } from './Components/educacion/edit-educacion.component';
 import { EditAcercaDeComponent } from './Components/acerca-de/edit-acerca-de.component';
+import { PersonaService } from './service/persona.service';
 
 @NgModule({
   declarations: [
@@ -75,7 +77,9 @@ import { EditAcercaDeComponent } from './Components/acerca-de/edit-acerca-de.com
     HttpClientModule,
   ],
   providers: [
-    InterceptorService
+    InterceptorService,
+    PersonaService, 
+    
   ],
   bootstrap: [AppComponent],
 })

@@ -10,7 +10,7 @@ import { TokenService } from 'src/app/service/token.service';
   styleUrls: ['./edit-acerca-de.component.css'],
 })
 export class EditAcercaDeComponent implements OnInit {
-  persona: Persona = new Persona('', '', '', '');
+  persona: Persona;
 
   constructor(
     public personaService: PersonaService,
@@ -36,13 +36,16 @@ export class EditAcercaDeComponent implements OnInit {
 
   onUpdate(): void {
     const id = 1;
-
-    this.personaService.update(id, this.persona).subscribe(
+    this.personaService.editarPersona(this.persona).subscribe(
       data => {
         this.router.navigate(['']);
+        alert('Persona modificada');
+
       }, err => {
         alert('Error al modificar persona');
       }
+     
     );
+
   }
 }

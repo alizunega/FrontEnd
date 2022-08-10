@@ -1,7 +1,7 @@
 <div class="container-fluid" *ngIf="persona">
-  <div class="row no-gutters mb-2 pb-1">
+  <div class="row no-gutters mb-2 pb-1 align-items-start text-center">
     <!-- columna foto -->
-    <div class="col d-inline-block position-relative">
+    <div class="col-3 d-inline-block position-relative">
       <img
         class="img-fluid foto-perfil"
         id="img"
@@ -19,19 +19,19 @@
     </div>
 
     <!-- columna nombre y titulo -->
-    <div class="col">
+    <div class="col-5">
       <h3 id="nombre" name="nombre">{{ persona.nombre }} {{ persona.apellido }}</h3>
-      <h5>FullStack Developer Jr</h5>
+      <h4> {{ persona.titulo}}</h4>
       <button
         type="button"
         class="btn btn-xs btn-outline-secondary bi bi-pencil-square"
         *ngIf="isLogged"
-        routerLink="/editAbout/{{ persona.id}}"
+        routerLink="/editAbout/{{persona.id}}"
       ></button>
 
     </div>
     <!-- columna acerca de mi -->
-    <div class="col">
+    <div class="col-4">
       <h2>Acerca de mi:</h2>
       <p id="about">{{ persona.about }}</p>
       <button

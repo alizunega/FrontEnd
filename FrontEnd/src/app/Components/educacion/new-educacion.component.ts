@@ -12,8 +12,8 @@ export class NewEducacionComponent implements OnInit {
 
   titulo: string = '';
   nombreInstitucion: string = '';
-  fInicio: string =  ''
-  fFin: string = '';
+  fechainicio: string =  ''
+  fechafin: string = '';
 
   constructor(private educacionService: EducacionService, private router: Router) { }
 
@@ -21,8 +21,8 @@ export class NewEducacionComponent implements OnInit {
 
   }
   onCreate(): void {
-    const educ = new Educacion(this.titulo, this.nombreInstitucion, this.fInicio, this.fFin);
-    this.educacionService.save(educ).subscribe(
+    const educ = new Educacion();
+    this.educacionService.addEducacion(educ).subscribe(
       data => {
         alert("Educación añadida");
         this.router.navigate(['']);

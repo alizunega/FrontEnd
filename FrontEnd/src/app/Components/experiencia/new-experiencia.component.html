@@ -3,21 +3,21 @@
         <div>
             <form #form="ngForm" (ngSubmit)="onCreate()" novalidate >
                 <div class="form-control">
-                    <label for="nombreE">Nombre Empresa</label>
-                    <input type="text" id="nombreE" name="nombreE" [(ngModel)]="nombreE" required />
+                    <label for="nombreExpe">Nombre Empresa</label>
+                    <input type="text" id="nombreExpe" name="nombreExpe" [(ngModel)]="nombreExpe" required />
                 </div>
                 <div class="form-control">
-                    <label for="descripcionE">Descripción del empleo</label>
-                    <input type="text" id="descripcionE" name="descripcionE" [(ngModel)]="descripcionE" required />
+                    <label for="descripcionExpe">Descripción del empleo</label>
+                    <input type="text" id="descripcionExpe" name="descripcionExpe" [(ngModel)]="descripcionExpe" required />
                 </div>
                 <div class="form-control">
-                    <label for="fInicio">Fecha Inicio</label>
-                    <input type="text" id="fInicio" name="fInicio" [(ngModel)]="fInicio" required />
+                    <label for="fechainicio">Fecha Inicio</label>
+                    <input type="text" id="fechainicio" name="fechainicio" [(ngModel)]="fechainicio" required />
                     <span>Formato mm-aaaa</span>
                 </div>
                 <div class="form-control">
-                    <label for="fFin">Fecha Fin <small>(Dejar vacio si es actual)*</small></label>
-                    <input type="text" id="fFin" name="fFin" [(ngModel)]="fFin"/>
+                    <label for="fechafin">Fecha Fin <small>(Dejar vacio si es actual)*</small></label>
+                    <input type="text" id="fechafin" name="fechafin" [(ngModel)]="fechafin"/>
                     <small>Formato mm-aaaa</small>
                 </div>
                 <div class="form-control">

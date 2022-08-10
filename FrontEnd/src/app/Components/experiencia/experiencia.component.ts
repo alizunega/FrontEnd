@@ -1,3 +1,4 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Experiencia } from 'src/app/model/experiencia';
 import { SExperienciaService } from 'src/app/service/s-experiencia.service';
@@ -9,7 +10,8 @@ import { TokenService } from 'src/app/service/token.service';
   styleUrls: ['./experiencia.component.css']
 })
 export class ExperienciaComponent implements OnInit {
-  expe: Experiencia[] = [];
+
+  public experiencia: Experiencia[] = [];
 
   constructor(private sExperiencia: SExperienciaService, private tokenService: TokenService) { }
 
@@ -25,19 +27,22 @@ export class ExperienciaComponent implements OnInit {
   }
 
   cargarExperiencia():void{
-    this.sExperiencia.lista().subscribe(data => {this.expe = data;})
+    this.sExperiencia.lista().subscribe(data => {this.experiencia = data;})
   }
   
   delete(id?: number):void{
-    if(id!= undefined){
-      this.sExperiencia.delete(id).subscribe(
-        data => {
-          this.cargarExperiencia();
-        }, err =>{
-          alert("No se pudo eliminar esa experiencia");
-        }
-      );
-    }
+    if(id != undefined){
+    this.sExperiencia.delete(id).subscribe({
+      next:(response: Experiencia)=>{
+        this.cargarExperiencia();
+        alert("Experiencia eliminada");
+
+      }, 
+      error:(error:HttpErrorResponse)=>{
+        alert(error.message);
+      }
+    })
+  }
   }
 
 }
