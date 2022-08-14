@@ -1,4 +1,5 @@
-<div class=".container-fluid" *ngIf="educ">
+<!-- id es para que tome el link interno del footer -->
+<div class="container-fluid" *ngIf="educacion" id="ir-educacion">
   <div class="list-group-flush w-90">
     <div class="row">
       <div class="col text-start">
@@ -8,7 +9,7 @@
         <button
           type="button"
           class="btn btn-sm btn-outline-secondary bi bi-plus-square"
-          routerLink="/nuevaeduc"
+          routerLink="/nuevaedu"
           *ngIf="isLogged"
         >
           Agregar
@@ -18,22 +19,22 @@
 
     <div class="list-group-item">
       <ul>
-        <li *ngFor="let Educacion of educ">
+        <li *ngFor="let Educacion of educacion">
           <div class="row align-items-center">
             <div class="col-3">
-              <h3>{{ Educacion.titulo }}</h3>
+              <h3>{{Educacion.titulo}}</h3>
             </div>
             <div class="col-4">
-              <h4>{{ Educacion.nombreInstitucion }}</h4>
+              <h4>{{Educacion.nombreInstitucion}}</h4>
             </div>
             <div class="col-3">
-              <h5>{{ Educacion.fechainicio }} - {{ Educacion.fechafin }}</h5>
+              <h5>{{Educacion.fechainicio}} - {{Educacion.fechafin}}</h5>
             </div>
             <div class="col-1">
               <button
                 *ngIf="isLogged"
                 class="bi bi-pencil btn btn-sm btn-outline-dark"
-                routerLink="/editEduc/{{ Educacion.id }}"
+                routerLink="/editedu/{{Educacion.id}}"
               >
                 Editar
               </button>

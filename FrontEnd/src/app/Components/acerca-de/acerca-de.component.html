@@ -1,4 +1,4 @@
-<div class="container-fluid" *ngIf="persona">
+<div class="container-fluid" *ngIf="persona" id="ir-acerca-de">
   <div class="row no-gutters mb-2 pb-1 align-items-start text-center">
     <!-- columna foto -->
     <div class="col-3 d-inline-block position-relative">
@@ -9,26 +9,23 @@
         src="{{ persona.img }}"
         alt="Foto Perfil"
       />
-      <button
-        type="button"
-        id="btn-img"
-        class="btn btn-xs btn-outline-secondary bi bi-pencil-square"
-        *ngIf="isLogged"
-        routerLink="/editAbout/{{ persona.id }}"
-      ></button>
     </div>
 
     <!-- columna nombre y titulo -->
     <div class="col-5">
-      <h3 id="nombre" name="nombre">{{ persona.nombre }} {{ persona.apellido }}</h3>
-      <h4> {{ persona.titulo}}</h4>
+      <h3 id="nombre" name="nombre">
+        {{ persona.nombre }} {{ persona.apellido }}
+      </h3>
+      <br>
+      <h4>{{ persona.titulo }}</h4>
+      <!--  
       <button
         type="button"
-        class="btn btn-xs btn-outline-secondary bi bi-pencil-square"
+        class="btn btn-outline-secondary bi bi-pencil-square"
         *ngIf="isLogged"
-        routerLink="/editAbout/{{persona.id}}"
-      ></button>
-
+        routerLink="/editAbout/{{ persona.id }}"
+        title="Editar"
+      > Editar </button> -->
     </div>
     <!-- columna acerca de mi -->
     <div class="col-4">
@@ -36,15 +33,11 @@
       <p id="about">{{ persona.about }}</p>
       <button
         type="button"
-        class="btn btn-sm btn-outline-secondary bi bi-pencil-square"
+        class="btn btn-outline-secondary bi bi-pencil-square"
         *ngIf="isLogged"
         routerLink="/editAbout/{{ persona.id }}"
-      ></button>
+        title="Editar"
+      > Editar </button>
     </div>
   </div>
-
-
-  
-  
-  
 </div>

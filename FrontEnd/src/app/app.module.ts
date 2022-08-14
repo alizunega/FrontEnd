@@ -17,18 +17,18 @@ import { AcercaDeComponent } from './Components/acerca-de/acerca-de.component';
 import { ExperienciaComponent } from './Components/experiencia/experiencia.component';
 import { EducacionComponent } from './Components/educacion/educacion.component';
 import { SkillsComponent } from './Components/skills/skills.component';
-import { PercentPipe } from '@angular/common';
 import { FooterComponent } from './Components/footer/footer.component';
 import { ProyectosComponent } from './Components/proyectos/proyectos.component';
 import { HomeComponent } from './Components/home/home.component';
 import { LoginComponent } from './Components/login/login.component';
-import { InterceptorService } from './service/interceptor-service';
+import { interceptorProvider, InterceptorService } from './service/interceptor-service';
 import { NewExperienciaComponent } from './Components/experiencia/new-experiencia.component';
 import { EditExperienciaComponent } from './Components/experiencia/edit-experiencia.component';
 import { NewEducacionComponent } from './Components/educacion/new-educacion.component';
 import { EditEducacionComponent } from './Components/educacion/edit-educacion.component';
 import { EditAcercaDeComponent } from './Components/acerca-de/edit-acerca-de.component';
-import { PersonaService } from './service/persona.service';
+import { NavComponent } from './components/nav/nav.component';
+
 
 @NgModule({
   declarations: [
@@ -49,7 +49,8 @@ import { PersonaService } from './service/persona.service';
     EditExperienciaComponent,
     NewEducacionComponent,
     EditEducacionComponent,
-    EditAcercaDeComponent
+    EditAcercaDeComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
@@ -77,9 +78,7 @@ import { PersonaService } from './service/persona.service';
     HttpClientModule,
   ],
   providers: [
-    InterceptorService,
-    PersonaService, 
-    
+    interceptorProvider
   ],
   bootstrap: [AppComponent],
 })

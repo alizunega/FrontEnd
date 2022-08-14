@@ -1,3 +1,8 @@
-#proyectos{
+#ir-proyectos{
     border-top: .05rem outset rgba(130, 128, 150, 0.447);
+}
+
+img{
+    max-width: 80%;
+    align-self: center;
 }

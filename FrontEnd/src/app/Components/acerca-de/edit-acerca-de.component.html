@@ -1,19 +1,22 @@
-<div class="container-fluid" *ngIf="persona">
+<div class="container-fluid w-50 g-3" *ngIf="persona">
 
-    <form #form="ngForm" (ngSubmit)="onUpdate()" novalidate>
-        <div class="form-control">
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" name="nombre" [(ngModel)]="persona.nombre" required />
+    <form #form="ngForm" (ngSubmit)="onUpdate()" novalidate class="g-3 align-items-center py-3">
+        <div class="row form-control mb-3">
+            <label for="nombre" class="col-3">Nombre </label>
+            <input class="col-9" type="text" id="nombre" name="nombre" [(ngModel)]="persona.nombre" required />
         </div>
-        <div class="form-control">
-            <label for="apellido">Apellido</label>
-            <input type="text" id="apellido" name="apellido" [(ngModel)]="persona.apellido" required />
+        <div class="row form-control mb-3">
+            <label class="col-3" for="apellido">Apellido </label>
+            <input class="col-9" type="text" id="apellido" name="apellido" [(ngModel)]="persona.apellido" required />
         </div>
-        <div class="form-control">
-            <label for="about">Acerca de...</label>
-            <input type="text" id="about" name="about" [(ngModel)]="persona.about" required />
+        <div class="row form-control mb-3">
+            <label class="col-3" for="titulo">Título </label>
+            <input class="col-9" type="text" id="titulo" name="titulo" [(ngModel)]="persona.titulo" required />
         </div>
-        
+        <div class="row form-control mb-3">
+            <label class="col-3" for="about">Acerca de... </label>
+            <input class="col-9" rows="2" type="textarea" id="about" name="about" [(ngModel)]="persona.about" required />
+        </div>
 
         <div class="form-control">
             <button type="submit" class="btn btn-md btn-secondary" (ngSubmit)="onUpdate()"> Actualizar </button>

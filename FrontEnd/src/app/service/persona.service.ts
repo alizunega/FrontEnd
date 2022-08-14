@@ -8,16 +8,16 @@ import { Persona } from '../model/persona.model';
   providedIn: 'root'
 })
 export class PersonaService {
-  private apiServerUrl=environment.apiBaseUrl;
+  URL ='http://localhost:8080/persona'
 
   constructor(private httpClient: HttpClient) { }
 
    public getPersona():Observable<Persona>{
-    return this.httpClient.get<Persona>(`${this.apiServerUrl}/persona/traer/1`); 
+    return this.httpClient.get<Persona>(this.URL+`/traer/1`); 
   }
   
   public editarPersona(persona: Persona): Observable<Persona>{
-    return this.httpClient.put<Persona>(`${this.apiServerUrl}/persona/editar`,persona);
+    return this.httpClient.put<Persona>(this.URL+`/editar`,persona);
   }
 
 

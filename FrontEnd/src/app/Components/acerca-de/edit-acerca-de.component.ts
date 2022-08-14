@@ -38,8 +38,8 @@ export class EditAcercaDeComponent implements OnInit {
     const id = 1;
     this.personaService.editarPersona(this.persona).subscribe(
       data => {
-        this.router.navigate(['']);
         alert('Persona modificada');
+        this.router.navigate(['']);
 
       }, err => {
         alert('Error al modificar persona');

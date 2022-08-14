@@ -10,7 +10,7 @@ import { HttpErrorResponse } from '@angular/common/http';
   styleUrls: ['./educacion.component.css'],
 })
 export class EducacionComponent implements OnInit {
-  educ: Educacion[] = [];
+  educacion: Educacion[] = [];
 
   constructor(
     private sEducacion: EducacionService,
@@ -30,26 +30,23 @@ export class EducacionComponent implements OnInit {
   }
 
   cargarEducacion(): void {
-    this.sEducacion.getEducacion().subscribe({
-      next:(Response: Educacion[])=>  {
-        this.educ = Response;
-      }, 
-      error:(error:HttpErrorResponse)=>{
-        alert(error.message);
+    this.sEducacion.lista().subscribe(
+      data =>{
+        this.educacion = data;
       }
-    });
+    )
   }
 
   delete(id: number) {
     if (id != undefined) {
       this.sEducacion.delete(id).subscribe(
-        (data) => {
+        data => {
           this.cargarEducacion();
-        },
-        (err) => {
-          alert('No se pudo eliminar');
+        }, err => {
+          alert("No se pudo eliminar");
         }
-      );
+      )
     }
   }
+  
 }

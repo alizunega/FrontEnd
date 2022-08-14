@@ -1,23 +1,23 @@
-<div class="container-fluid" *ngIf="experiencia">
+<div class="container-fluid" *ngIf="expLab">
     <div class="row w-50">
         <div>
-            <form #form="ngForm" (ngSubmit)="onUpdate()" novalidate >
+            <form  (ngSubmit)="onUpdate()" novalidate #form="ngForm">
                 <div class="form-control">
                     <label for="nombreExpe">Nombre Empresa</label>
-                    <input type="text" id="nombreExpe" name="nombreExpe" [(ngModel)]="experiencia.nombreExpe" required />
+                    <input type="text" id="nombreExpe" name="nombreExpe" [(ngModel)]="expLab.nombreExpe" required />
                 </div>
                 <div class="form-control">
                     <label for="descripcionExpe">Descripción del empleo</label>
-                    <input type="text" id="descripcionExpe" name="descripcionExpe" [(ngModel)]="experiencia.descripcionExpe" required />
+                    <input type="text" id="descripcionExpe" name="descripcionExpe" [(ngModel)]="expLab.descripcionExpe" required />
                 </div>
                 <div class="form-control">
                     <label for="fechainicio">Fecha Inicio</label>
-                    <input type="text" id="fechainicio" name="fechainicio" [(ngModel)]="experiencia.fechainicio" required /> 
-                    <span>formato dd-mm-aaaa</span>
+                    <input type="text" id="fechainicio" name="fechainicio" [(ngModel)]="expLab.fechainicio" required /> 
+                    <small>Formato dd-mm-aaaa</small>
                 </div>
                 <div class="form-control">
                     <label for="fechafin">Fecha Fin <small>(Dejar vacio si es actual*)</small></label>
-                    <input type="text" id="fechafin" name="fechafin" [(ngModel)]="experiencia.fechafin"/><span>formato dd-mm-aaaa</span>
+                    <input type="text" id="fechafin" name="fechafin" [(ngModel)]="expLab.fechafin"/><small>Formato dd-mm-aaaa</small>
                 </div>
                 <div class="form-control">
                     <button type="submit" class="btn btn-md btn-secondary" (click)="onUpdate()"> Actualizar </button>

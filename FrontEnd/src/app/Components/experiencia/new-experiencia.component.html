@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <div class="row w-50">
         <div>
-            <form #form="ngForm" (ngSubmit)="onCreate()" novalidate >
+            <form (ngSubmit)="onCreate()" novalidate #form="ngForm" >
                 <div class="form-control">
                     <label for="nombreExpe">Nombre Empresa</label>
                     <input type="text" id="nombreExpe" name="nombreExpe" [(ngModel)]="nombreExpe" required />
@@ -21,7 +21,7 @@
                     <small>Formato mm-aaaa</small>
                 </div>
                 <div class="form-control">
-                    <button class="btn btn-md btn-secondary" type="submit"> Agregar</button>
+                    <button class="btn btn-md btn-secondary" type="submit" (click)="onCreate()"> Agregar</button>
                     <button class="btn btn-md btn-outline-primary" routerLink="/#"> Volver a inicio</button>
                 </div>
             </form>

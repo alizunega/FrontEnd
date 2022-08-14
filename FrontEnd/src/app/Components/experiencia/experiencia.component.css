@@ -1,13 +1,16 @@
 .list-group-flush{
-    padding-left: 1rem;
-    padding-top: 0.5rem;
+    padding-left: 0.75rem;
+    padding-top: 1rem;
     margin-top: .5rem;
-} 
+}
 li{
     list-style: none;
-    margin-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    margin-top: .5rem;
+    padding-bottom: .5rem;
     border-bottom: .05rem outset rgba(130, 128, 150, 0.447);
+}
+.container-fluid{
+    max-width: 100%;
 }
 
 #experiencia{
