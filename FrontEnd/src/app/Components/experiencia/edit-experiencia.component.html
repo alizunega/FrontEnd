@@ -1,7 +1,7 @@
 <div class="container-fluid" *ngIf="expLab">
     <div class="row w-50">
         <div>
-            <form  (ngSubmit)="onUpdate()" novalidate #form="ngForm">
+            <form  novalidate #form="ngForm">
                 <div class="form-control">
                     <label for="nombreExpe">Nombre Empresa</label>
                     <input type="text" id="nombreExpe" name="nombreExpe" [(ngModel)]="expLab.nombreExpe" required />

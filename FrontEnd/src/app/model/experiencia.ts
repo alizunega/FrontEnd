@@ -5,7 +5,12 @@ export class Experiencia {
   fechainicio: string;
   fechafin: string;
 
-  constructor(nombreExpe: string, descripcionExpe: string, fechainicio: string, fechafin: string) {
+  constructor(
+    nombreExpe: string,
+    descripcionExpe: string,
+    fechainicio: string,
+    fechafin: string
+  ) {
     this.nombreExpe = nombreExpe;
     this.descripcionExpe = descripcionExpe;
     this.fechainicio = fechainicio;

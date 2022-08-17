@@ -1,7 +1,7 @@
-<div class="container-fluid" *ngIf="educacion">
-    <div class="row w-50">
+<div class="container-fluid d-flex justify-content-center mt-3" *ngIf="educacion">
+    <div class="row w-70">
         <div>
-            <form #form="ngForm" (ngSubmit)="onUpdate()" novalidate >
+            <form #form="ngForm" novalidate class="flex-sm-column justify-content-between">
                 <div class="form-control">
                     <label for="titulo">Título</label>
                     <input type="text" id="titulo" name="titulo" [(ngModel)]="educacion.titulo" required />
@@ -15,7 +15,7 @@
                     <input type="text" id="fechainicio" name="fechainicio" [(ngModel)]="educacion.fechainicio" required />
                 </div>
                 <div class="form-control">
-                    <label for="fechafin">Fecha Fin <small>(Dejar vacio si es actual*)</small></label>
+                    <label for="fechafin">Fecha Fin</label>
                     <input type="text" id="fechafin" name="fechafin" [(ngModel)]="educacion.fechafin"/>
                 </div>
                 <div class="form-control">

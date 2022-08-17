@@ -1,0 +1,4 @@
+.form-control{
+    justify-content: space-between;
+    display: flex;
+}
