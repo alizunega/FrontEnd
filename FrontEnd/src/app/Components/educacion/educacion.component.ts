@@ -30,23 +30,21 @@ export class EducacionComponent implements OnInit {
   }
 
   cargarEducacion(): void {
-    this.sEducacion.lista().subscribe(
-      data =>{
-        this.educacion = data;
-      }
-    )
+    this.sEducacion.lista().subscribe((data) => {
+      this.educacion = data;
+    });
   }
 
   delete(id: number) {
     if (id != undefined) {
       this.sEducacion.delete(id).subscribe(
-        data => {
+        (data) => {
           this.cargarEducacion();
-        }, err => {
-          alert("No se pudo eliminar");
+        },
+        (err) => {
+          alert('No se pudo eliminar');
         }
-      )
+      );
     }
   }
-  
 }

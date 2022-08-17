@@ -43,6 +43,7 @@ export class EditAcercaDeComponent implements OnInit {
 
       }, err => {
         alert('Error al modificar persona');
+        this.router.navigate(['']);
       }
      
     );

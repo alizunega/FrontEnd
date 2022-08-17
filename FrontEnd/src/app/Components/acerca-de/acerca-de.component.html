@@ -1,7 +1,7 @@
 <div class="container-fluid" *ngIf="persona" id="ir-acerca-de">
-  <div class="row no-gutters mb-2 pb-1 align-items-start text-center">
+  <div class="row no-gutters mb-2 pb-1 align-items-start">
     <!-- columna foto -->
-    <div class="col-3 d-inline-block position-relative">
+    <div class="col-3 d-inline-block position-relative text-center">
       <img
         class="img-fluid foto-perfil"
         id="img"
@@ -12,7 +12,7 @@
     </div>
 
     <!-- columna nombre y titulo -->
-    <div class="col-5">
+    <div class="col-5 text-center">
       <h3 id="nombre" name="nombre">
         {{ persona.nombre }} {{ persona.apellido }}
       </h3>
