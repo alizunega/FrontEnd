@@ -2,13 +2,12 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Educacion } from '../model/educacion';
-import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class EducacionService {
-  URL = 'http://localhost:8080/educacion';
+  private URL = 'http://localhost:8080/educacion';
 
   constructor(private http: HttpClient) {}
 
@@ -20,8 +19,8 @@ export class EducacionService {
     return this.http.get<Educacion>(`${this.URL}/traer/${id}`);
   }
 
-  public save(educacion: Educacion): Observable<any> {
-    return this.http.post<any>(`${this.URL}/crear`, educacion);
+  public save(educacion: Educacion): Observable<Educacion> {
+    return this.http.post<Educacion>(`${this.URL}/crear`, educacion);
   }
 
   public update(id: number, educacion: Educacion): Observable<any> {

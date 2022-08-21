@@ -1,4 +1,4 @@
-<div class="container-fluid" id="ir-experiencia">
+<div class="container-fluid" *ngIf="experiencia" id="ir-experiencia">
   <div class="list-group-flush w-90">
     <div class="row">
       <div class="col text-start">
@@ -15,33 +15,37 @@
         </button>
       </div>
     </div>
+    <div class="row" *ngIf="experiencia.length <= 0">
+      <p style="color: rgb(196, 162, 162)">No hay experiencias para mostrar</p>
+    </div>
 
     <div class="list-group-item">
       <ul>
         <li *ngFor="let Experiencia of experiencia">
           <div class="row">
-            <div class="col-3">
+            <div class="col-12 col-sm-3">
               <h4>{{ Experiencia.nombreExpe }}</h4>
             </div>
-            <div class="col-4">
-              <p>{{ Experiencia.descripcionExpe }}</p>
+            <div class="col-12 col-sm-4">
+              <h5>{{ Experiencia.descripcionExpe }}</h5>
             </div>
-            <div class="col-3">
+            <div class="col-12 col-sm-3">
               <p>{{ Experiencia.fechainicio }} - {{ Experiencia.fechafin }}</p>
             </div>
-            <div class="col-1">
+            <div class="col-6 col-sm-1">
               <button
                 *ngIf="isLogged"
-                class="bi bi-pencil btn btn-outline-dark mx-1"
+                class="bi bi-pencil btn btn-sm btn-outline-dark"
                 routerLink="/editexp/{{ Experiencia.id }}"
               >
                 Editar
               </button>
             </div>
-            <div class="col-1">
+            <div class="col-6 col-sm-1">
               <button
                 *ngIf="isLogged"
-                class="bi bi-trash3-fill btn btn-outline-danger"
+                title="delete"
+                class="bi bi-trash3-fill btn btn-sm btn-outline-danger"
                 (click)="delete(Experiencia.id)"
               >
                 Borrar

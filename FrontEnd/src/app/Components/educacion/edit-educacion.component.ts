@@ -1,4 +1,3 @@
-import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Educacion } from 'src/app/model/educacion';
@@ -29,10 +28,8 @@ export class EditEducacionComponent implements OnInit {
     const id: number = this.activatedRouter.snapshot.params['id'];
     this.sEducacion.update(id, this.educacion).subscribe(
       (data) => {
-        this.router.navigate(['']);
-      },
-      (err) => {
-        alert('Error al modificar la educacion');
+        this.sEducacion = data;
+        alert("Educación Modificada");
         this.router.navigate(['']);
       }
     );

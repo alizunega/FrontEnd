@@ -1,31 +1,62 @@
-<div class="container-fluid">
-    <div class="row w-50">
-        <div>
-            <form  (ngSubmit)="onCreate()" novalidate #form="ngForm" >
-                <div class="form-control">
-                    <label for="nombreExpe">Nombre Empresa</label>
-                    <input type="text" id="nombreExpe" name="nombreExpe" [(ngModel)]="nombreExpe" required />
-                </div>
-                <div class="form-control">
-                    <label for="descripcionExpe">Descripción del empleo</label>
-                    <input type="text" id="descripcionExpe" name="descripcionExpe" [(ngModel)]="descripcionExpe" required />
-                </div>
-                <div class="form-control">
-                    <label for="fechainicio">Fecha Inicio</label>
-                    <input type="text" id="fechainicio" name="fechainicio" [(ngModel)]="fechainicio" required />
-                    <span>Formato mm-aaaa</span>
-                </div>
-                <div class="form-control">
-                    <label for="fechafin">Fecha Fin <small>(Dejar vacio si es actual)*</small></label>
-                    <input type="text" id="fechafin" name="fechafin" [(ngModel)]="fechafin"/>
-                    <small>Formato mm-aaaa</small>
-                </div>
-                <div class="form-control">
-                    <button class="btn btn-md btn-secondary" type="submit" > Agregar</button>
-                    <button class="btn btn-md btn-outline-primary" routerLink="/"> Volver a inicio</button>
-                </div>
-            </form>
+<div class="container-fluid d-flex justify-content-center mt-3 w-50">
+  <div class="row w-100">
+    <div>
+      <form #form="ngForm" novalidate>
+        <div class="form-control col-md-auto">
+          <label for="nombreExpe">Nombre Empresa: </label>
+          <input
+            type="text"
+            id="nombreExpe"
+            name="nombreExpe"
+            [(ngModel)]="nombreExpe"
+            required
+          />
         </div>
-    </div>
+        <div class="form-control col-md-auto">
+          <label for="descripcionExpe">Descripción del empleo: </label>
+          <input
+            type="text"
+            id="descripcionExpe"
+            name="descripcionExpe"
+            [(ngModel)]="descripcionExpe"
+            required
+          />
+        </div>
+        <div class="form-control col-md-auto">
+          <label for="fechainicio">Fecha Inicio: </label>
 
+          <input
+            type="text"
+            id="fechainicio"
+            name="fechainicio"
+            [(ngModel)]="fechainicio"
+            required
+            placeholder="Formato mm-aaaa"
+          />
+        </div>
+        <div class="form-control col-md-auto">
+          <label for="fechafin">Fecha Fin: </label>
+          <input
+            type="text"
+            id="fechafin"
+            name="fechafin"
+            [(ngModel)]="fechafin"
+            placeholder="Actualidad"
+          />
+        </div>
+        <div class="form-control col-md-auto">
+          <button
+            class="btn btn-md btn-outline-success"
+            type="submit"
+            (click)="onCreate()"
+          >
+            Agregar
+          </button>
+          <button class="btn btn-md btn-outline-primary" [routerLink]="'/'">
+            Volver a inicio
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
 </div>

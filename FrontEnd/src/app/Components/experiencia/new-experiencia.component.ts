@@ -30,14 +30,9 @@ export class NewExperienciaComponent implements OnInit {
       this.fechafin
     );
 
-    this.sExperiencia.save(expe).subscribe(
-      (data) => {
-        this.router.navigate(['']);
-      },
-      (err) => {
-        alert(err);
-        this.router.navigate(['']);
-      }
-    );
+    this.sExperiencia.save(expe).subscribe((response) => {
+      this.sExperiencia.lista();
+      this.router.navigate(['']);
+    });
   }
 }

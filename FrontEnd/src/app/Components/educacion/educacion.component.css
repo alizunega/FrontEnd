@@ -1,17 +1,10 @@
-.list-group-flush{
-    padding-left: .75rem;
+.list-group-flush {
+    padding-left: .5rem;
     padding-top: 1rem;
     margin-top: .5rem;
 }
-.container-fuid{
-    max-width: 100%;
-}
 
-#educacion{
-    border-top: .05rem outset rgba(130, 128, 150, 0.447);
-}
-
-li{
+li {
     list-style: none;
     margin-top: .5rem;
     padding-bottom: .5rem;

@@ -10,7 +10,7 @@ import { HttpErrorResponse } from '@angular/common/http';
   styleUrls: ['./educacion.component.css'],
 })
 export class EducacionComponent implements OnInit {
-  educacion: Educacion[] = [];
+  educacion: Educacion[];
 
   constructor(
     private sEducacion: EducacionService,

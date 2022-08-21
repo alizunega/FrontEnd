@@ -1,13 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule , ReactiveFormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { NgCircleProgressModule } from 'ng-circle-progress';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
 
 import { HeaderComponent } from './Components/header/header.component';
 import { LogoApComponent } from './Components/logo-ap/logo-ap.component';
@@ -21,14 +20,12 @@ import { FooterComponent } from './Components/footer/footer.component';
 import { ProyectosComponent } from './Components/proyectos/proyectos.component';
 import { HomeComponent } from './Components/home/home.component';
 import { LoginComponent } from './Components/login/login.component';
-import { interceptorProvider, InterceptorService } from './service/interceptor-service';
+import { interceptorProvider } from './service/interceptor-service';
 import { NewExperienciaComponent } from './Components/experiencia/new-experiencia.component';
 import { EditExperienciaComponent } from './Components/experiencia/edit-experiencia.component';
 import { NewEducacionComponent } from './Components/educacion/new-educacion.component';
 import { EditEducacionComponent } from './Components/educacion/edit-educacion.component';
 import { EditAcercaDeComponent } from './Components/acerca-de/edit-acerca-de.component';
-
-
 
 @NgModule({
   declarations: [
@@ -49,17 +46,17 @@ import { EditAcercaDeComponent } from './Components/acerca-de/edit-acerca-de.com
     EditExperienciaComponent,
     NewEducacionComponent,
     EditEducacionComponent,
-    EditAcercaDeComponent
+    EditAcercaDeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule , 
+    FormsModule,
     ReactiveFormsModule,
 
-    // Specify ng-circle-progress as an import
+    // importa ng progress
     NgCircleProgressModule.forRoot({
-      // set defaults here
+      // valores por defecto por si no ingresa valores en formulario
       radius: 100,
       maxPercent: 100,
       outerStrokeWidth: 16,
@@ -76,9 +73,7 @@ import { EditAcercaDeComponent } from './Components/acerca-de/edit-acerca-de.com
     }),
     HttpClientModule,
   ],
-  providers: [
-    interceptorProvider
-  ],
+  providers: [interceptorProvider],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

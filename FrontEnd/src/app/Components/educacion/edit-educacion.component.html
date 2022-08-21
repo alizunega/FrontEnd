@@ -1,32 +1,63 @@
-<div class="container-fluid d-flex justify-content-center mt-3" *ngIf="educacion">
-    <div class="row w-70">
-        <div>
-            <form #form="ngForm" novalidate class="flex-sm-column justify-content-between">
-                <div class="form-control">
-                    <label for="titulo">Título</label>
-                    <input type="text" id="titulo" name="titulo" [(ngModel)]="educacion.titulo" required />
-                </div>
-                <div class="form-control">
-                    <label for="nombreInstitucion">Nombre Institucion</label>
-                    <input type="text" id="nombreInstitucion" name="nombreInstitucion" [(ngModel)]="educacion.nombreInstitucion" required />
-                </div>
-                <div class="form-control">
-                    <label for="fechainicio">Fecha Inicio</label>
-                    <input type="text" id="fechainicio" name="fechainicio" [(ngModel)]="educacion.fechainicio" required />
-                </div>
-                <div class="form-control">
-                    <label for="fechafin">Fecha Fin</label>
-                    <input type="text" id="fechafin" name="fechafin" [(ngModel)]="educacion.fechafin"/>
-                </div>
-                <div class="form-control">
-                    <button class="btn btn-md btn-secondary" (click)="onUpdate()"> Actualizar </button>
-                    <button class="btn btn-md btn-outline-primary" routerLink="/#"> Volver sin cambios </button>
-                </div>
-                
-            </form>
+<div
+  class="container-fluid d-flex justify-content-center mt-3 w-50"
+  *ngIf="educacion"
+>
+  <div class="row w-100">
+    <div>
+      <form #form="ngForm" novalidate>
+        <div class="form-control col-md-auto">
+          <label for="titulo">Título</label>
+          <input
+            type="text"
+            id="titulo"
+            name="titulo"
+            [(ngModel)]="educacion.titulo"
+            required
+          />
         </div>
+        <div class="form-control col-md-auto">
+          <label for="nombreInstitucion">Nombre Institucion</label>
+          <input
+            type="text"
+            id="nombreInstitucion"
+            name="nombreInstitucion"
+            [(ngModel)]="educacion.nombreInstitucion"
+            required
+          />
+        </div>
+        <div class="form-control col-md-auto">
+          <label for="fechainicio">Fecha Inicio</label>
+          <input
+            type="text"
+            id="fechainicio"
+            name="fechainicio"
+            [(ngModel)]="educacion.fechainicio"
+            required
+            placeholder="Formato mm-aaaa"
+          />
+        </div>
+        <div class="form-control col-md-auto">
+          <label for="fechafin">Fecha Fin</label>
+          <input
+            type="text"
+            id="fechafin"
+            name="fechafin"
+            [(ngModel)]="educacion.fechafin"
+          />
+        </div>
+        <div class="form-control col-md-auto">
+          <button
+            class="btn btn-md btn-success"
+            type="submit"
+            (click)="onUpdate()"
+          >
+            Actualizar
+          </button>
+          <button class="btn btn-md btn-outline-primary" [routerLink]="'/'">
+            Volver sin cambios
+          </button>
+        </div>
+      </form>
     </div>
-
+  </div>
 </div>
-
-
