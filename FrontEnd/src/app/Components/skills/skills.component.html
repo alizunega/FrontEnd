@@ -1,118 +1,52 @@
-<div class="container-fluid mw-100" id="ir-skills">
-  <div class="row mt-3">
-    <div class="col text-start">
-      <h1>Hard & Soft Skills</h1>
-    </div>
-    <div class="col-2 text-end">
-      <a href="#" class="btn btn-sm btn-outline-secondary bi bi-pencil-square">
-        Editar</a
-      >
-    </div>
-    <div class="row mt-3">
-      <div class="col">
-        <circle-progress
-          [percent]="95"
-          [outerStrokeColor]="'#677E9B'"
-          [innerStrokeColor]="'#9EA4AB'"
-          [imageSrc]="'../assets/hard skills/html.png'"
-        ></circle-progress>
-        <small>HTML:5</small>
-      </div>
-      <div class="col">
-        <circle-progress
-          [percent]="90"
-          [outerStrokeColor]="'#677E9B'"
-          [innerStrokeColor]="'#9EA4AB'"
-          [imageSrc]="'../assets/hard skills/CSS.png'"
-        ></circle-progress>
-        <small>CSS</small>
-      </div>
-
-      <div class="col">
-        <circle-progress
-          [percent]="85"
-          [outerStrokeColor]="'#677E9B'"
-          [innerStrokeColor]="'#9EA4AB'"
-          [imageSrc]="' ../assets/hard skills/js.png'"
-        ></circle-progress>
-        <small>JavaScript</small>
-      </div>
-      <div class="col">
-        <circle-progress
-          [percent]="70"
-          [outerStrokeColor]="'#677E9B'"
-          [innerStrokeColor]="'#9EA4AB'"
-          [imageSrc]="'../assets/hard skills/git.png'"
-        ></circle-progress>
-        <small>Git</small>
-      </div>
-      <div class="col">
-        <circle-progress
-          [percent]="80"
-          [outerStrokeColor]="'#677E9B'"
-          [innerStrokeColor]="'#9EA4AB'"
-          [imageSrc]="'../assets/hard skills/github.png'"
-        ></circle-progress>
-        <small>GitHub</small>
-      </div>
-      <div class="col">
-        <circle-progress
-          [percent]="80"
-          [outerStrokeColor]="'#677E9B'"
-          [innerStrokeColor]="'#9EA4AB'"
-          [imageSrc]="'../assets/hard skills/eng.png'"
-        ></circle-progress>
-        <small>Inglés</small>
-      </div>
-    </div>
+<!-- id es para que tome el link interno del footer -->
+<div class="container-fluid" id="ir-skills" *ngIf="skills">
+  <div class="list-group-flush w-90">
     <div class="row">
-      <div class="col">
-        <circle-progress
-          [percent]="90"
-          [outerStrokeColor]="'#677E9B'"
-          [innerStrokeColor]="'#597BA7'"
-          [imageSrc]="'../assets/soft skills/equipo.png'"
-        ></circle-progress>
-        <small>Trabajo en equipo</small>
+      <div class="col text-start">
+        <h1>Hard y Soft Skills</h1>
       </div>
-      <div class="col">
-        <circle-progress
-          [percent]="75"
-          [outerStrokeColor]="'#677E9B'"
-          [innerStrokeColor]="'#597BA7'"
-          [imageSrc]="'../assets/soft skills/comunicacion.png'"
-        ></circle-progress>
-        <small>Comunicación</small>
+      <div class="col text-end">
+        <button
+          type="button"
+          class="btn btn-sm btn-outline-secondary bi bi-plus-square"
+          routerLink="/nuevaskill"
+          *ngIf="isLogged"
+        >
+          Agregar
+        </button>
       </div>
+    </div>
+    <div class="row" *ngIf="skills.length <= 0">
+      <p style="color: rgb(196, 162, 162)">No hay skills para mostrar</p>
+    </div>
 
-      <div class="col">
-        <circle-progress
-          [percent]="70"
-          [outerStrokeColor]="'#677E9B'"
-          [innerStrokeColor]="'#597BA7'"
-          [imageSrc]="'../assets/soft skills/autoconfianza.png'"
-          [imageHeight]="150"
-          [imageWidth]="150"
-        ></circle-progress>
-        <small>Autoconfianza</small>
-      </div>
-      <div class="col">
-        <circle-progress
-          [percent]="99"
-          [outerStrokeColor]="'#677E9B'"
-          [innerStrokeColor]="'#597BA7'"
-          [imageSrc]="'../assets/soft skills/empatia.png'"
-        ></circle-progress>
-        <small>Empatía</small>
-      </div>
-      <div class="col">
-        <circle-progress
-          [percent]="99"
-          [outerStrokeColor]="'#677E9B'"
-          [innerStrokeColor]="'#597BA7'"
-          [imageSrc]="'../assets/soft skills/responsabilidad.png'"
-        ></circle-progress>
-        <small>Responsabilidad</small>
+    <div class="row mt-2">
+      <div class="col list-group-item">
+        <ul>
+          <li *ngFor="let Skill of skills">
+            <circle-progress
+              [percent]="Skill.porcentaje"
+              [outerStrokeColor]="Skill.colorExterno"
+              [innerStrokeColor]="Skill.colorInterno"
+              [imageSrc]="Skill.imgsrc"
+            ></circle-progress>
+            <small>{{ Skill.nombreSkills }}</small>
+            <button
+              *ngIf="isLogged"
+              class="bi bi-pencil btn btn-sm btn-outline-dark"
+              routerLink="/editskill/{{ Skill.id }}"
+            >
+              Editar
+            </button>
+            <button
+              *ngIf="isLogged"
+              class="bi bi-trash3-fill btn btn-sm btn-outline-danger"
+              (click)="delete(Skill.id)"
+            >
+              Borrar
+            </button>
+          </li>
+        </ul>
       </div>
     </div>
   </div>

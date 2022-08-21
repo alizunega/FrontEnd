@@ -16,7 +16,7 @@
       <h3 id="nombre" name="nombre">
         {{ persona.nombre }} {{ persona.apellido }}
       </h3>
-      <br>
+      <br />
       <h4>{{ persona.titulo }}</h4>
       <!--  
       <button
@@ -37,7 +37,9 @@
         *ngIf="isLogged"
         routerLink="/editAbout/{{ persona.id }}"
         title="Editar"
-      > Editar </button>
+      >
+        Editar
+      </button>
     </div>
   </div>
 </div>

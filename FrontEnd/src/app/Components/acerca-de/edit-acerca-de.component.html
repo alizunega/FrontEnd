@@ -1,27 +1,67 @@
 <div class="container-fluid w-50 g-3" *ngIf="persona">
+  <form
+    #form="ngForm"
+    (ngSubmit)="onUpdate()"
+    novalidate
+    class="g-3 align-items-center py-3"
+  >
+    <div class="row form-control mb-3">
+      <label for="nombre" class="col-3">Nombre </label>
+      <input
+        class="col-9"
+        type="text"
+        id="nombre"
+        name="nombre"
+        [(ngModel)]="persona.nombre"
+        required
+      />
+    </div>
+    <div class="row form-control mb-3">
+      <label class="col-3" for="apellido">Apellido </label>
+      <input
+        class="col-9"
+        type="text"
+        id="apellido"
+        name="apellido"
+        [(ngModel)]="persona.apellido"
+        required
+      />
+    </div>
+    <div class="row form-control mb-3">
+      <label class="col-3" for="titulo">Título </label>
+      <input
+        class="col-9"
+        type="text"
+        id="titulo"
+        name="titulo"
+        [(ngModel)]="persona.titulo"
+        required
+      />
+    </div>
+    <div class="row form-control mb-3">
+      <label class="col-3" for="about">Acerca de... </label>
+      <input
+        class="col-9"
+        rows="2"
+        type="textarea"
+        id="about"
+        name="about"
+        [(ngModel)]="persona.about"
+        required
+      />
+    </div>
 
-    <form #form="ngForm" (ngSubmit)="onUpdate()" novalidate class="g-3 align-items-center py-3">
-        <div class="row form-control mb-3">
-            <label for="nombre" class="col-3">Nombre </label>
-            <input class="col-9" type="text" id="nombre" name="nombre" [(ngModel)]="persona.nombre" required />
-        </div>
-        <div class="row form-control mb-3">
-            <label class="col-3" for="apellido">Apellido </label>
-            <input class="col-9" type="text" id="apellido" name="apellido" [(ngModel)]="persona.apellido" required />
-        </div>
-        <div class="row form-control mb-3">
-            <label class="col-3" for="titulo">Título </label>
-            <input class="col-9" type="text" id="titulo" name="titulo" [(ngModel)]="persona.titulo" required />
-        </div>
-        <div class="row form-control mb-3">
-            <label class="col-3" for="about">Acerca de... </label>
-            <input class="col-9" rows="2" type="textarea" id="about" name="about" [(ngModel)]="persona.about" required />
-        </div>
-
-        <div class="form-control">
-            <button type="submit" class="btn btn-md btn-secondary"> Actualizar </button>
-            <button class="btn btn-md btn-outline-primary" routerLink="/#"> Volver sin cambios </button>
-        </div>
-    </form>
+    <div class="row form-control d-flex">
+      <div class="col-sm-6 col-6">
+        <button type="submit" class="btn btn-md btn-outline-success">
+          Actualizar
+        </button>
+      </div>
+      <div class="col-sm-6 col-6">
+        <button class="btn btn-md btn-outline-primary" routerLink="/#">
+          Volver sin cambios
+        </button>
+      </div>
+    </div>
+  </form>
 </div>
-

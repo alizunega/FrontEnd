@@ -1,20 +1,10 @@
-.container-fluid {
-    justify-content: center;
-    align-items: center;
+.form-control {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: .5rem;
 }
 
-.row {
-    position: absolute;
-    top: 50%;
-    transform: translate(50%, -50%);
-}
-
-input{
-    position: relative;
-    margin: 1rem;
-    justify-content: left;
-}
-
-.botones{
-    justify-content: space-evenly;
+input {
+    width: 25rem;
 }

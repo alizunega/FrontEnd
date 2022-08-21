@@ -1,4 +1,3 @@
-import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Experiencia } from 'src/app/model/experiencia';
@@ -20,26 +19,19 @@ export class EditExperienciaComponent implements OnInit {
 
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
-    this.sExperiencia.listaPorId(id).subscribe(
-      data =>{
-        this.expLab = data;
-      }, err =>{
-        alert("Error al cargar la experiencia");
-        this.router.navigate(['']);
-      }
-    )
-    
+    this.sExperiencia.listaPorId(id).subscribe((data) => {
+      this.expLab = data;
+    });
   }
 
   onUpdate(): void {
-    const id = this.activatedRouter.snapshot.params['id'];
+    const id: number = this.activatedRouter.snapshot.params['id'];
     this.sExperiencia.update(id, this.expLab).subscribe(
-      data => {
+      (data) => {
+        this.sExperiencia = data;
+        alert("Experiencia Modificada");
         this.router.navigate(['']);
-      }, err =>{
-         alert("Error al modificar experiencia");
-         this.router.navigate(['']);
       }
-    )
+    );
   }
 }

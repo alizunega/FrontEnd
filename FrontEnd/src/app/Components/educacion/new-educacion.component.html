@@ -1,32 +1,57 @@
-<div class="container-fluid">
-    <div class="row w-50">
-        <div>
-            <form  (ngSubmit)="onCreate()" novalidate #form="ngForm">
-                <div class="form-control">
-                    <label for="titulo">Titulo</label>
-                    <input type="text" id="titulo" name="titulo" [(ngModel)]="titulo" required />
-                </div>
-                <div class="form-control">
-                    <label for="nombreInstitucion">Nombre Institucion</label>
-                    <input type="text" id="nombreInstitucion" name="nombreInstitucion" [(ngModel)]="nombreInstitucion" required />
-                </div>
-                <div class="form-control">
-                    <label for="fechainicio">Fecha Inicio</label>
-                    <input type="text" id="fechainicio" name="fechainicio" [(ngModel)]="fechainicio" required />
-                    
-                </div>
-                <div class="form-control">
-                    <label for="fechafin">Fecha Fin <small>(Dejar vacio si es actual)*</small></label>
-                    <input type="text" id="fechafin" name="fechafin" [(ngModel)]="fechafin"/>
-                </div>
-                <div class="form-control">
-                    <button class="btn btn-md btn-secondary" type="submit" (click)="onCreate()"> Agregar</button>
-                    <button class="btn btn-md btn-outline-primary" routerLink="/#"> Volver a inicio</button>
-                </div>
-                
-            </form>
+<div class="container-fluid d-flex justify-content-center mt-3 w-50">
+  <div class="row w-100">
+    <div>
+      <form #form="ngForm" novalidate>
+        <div class="form-control col-md-auto">
+          <label for="titulo">Titulo</label>
+          <input
+            type="text"
+            id="titulo"
+            name="titulo"
+            [(ngModel)]="titulo"
+            required
+          />
         </div>
+        <div class="form-control col-md-auto">
+          <label for="nombreInstitucion">Nombre Institucion</label>
+          <input
+            type="text"
+            id="nombreInstitucion"
+            name="nombreInstitucion"
+            [(ngModel)]="nombreInstitucion"
+            required
+          />
+        </div>
+        <div class="form-control col-md-auto">
+          <label for="fechainicio">Fecha Inicio</label>
+          <input
+            type="text"
+            id="fechainicio"
+            name="fechainicio"
+            [(ngModel)]="fechainicio"
+            required
+          />
+        </div>
+        <div class="form-control col-md-auto">
+          <label for="fechafin"
+            >Fecha Fin <small>(Dejar vacio si es actual)*</small></label
+          >
+          <input
+            type="text"
+            id="fechafin"
+            name="fechafin"
+            [(ngModel)]="fechafin"
+          />
+        </div>
+        <div class="form-control col-md-auto">
+          <button class="btn btn-md btn-outline-success" type="submit" (click)="onCreate()">
+            Agregar
+          </button>
+          <button class="btn btn-md btn-outline-primary" [routerLink]="'/'">
+            Volver a inicio
+          </button>
+        </div>
+      </form>
     </div>
-
+  </div>
 </div>
-
