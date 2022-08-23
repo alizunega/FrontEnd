@@ -6,12 +6,8 @@
         <h1>Educación</h1>
       </div>
       <div class="col text-end">
-        <button
-          type="button"
-          class="btn btn-sm btn-outline-secondary bi bi-plus-square"
-          routerLink="/nuevaedu"
-          *ngIf="isLogged"
-        >
+        <button type="button" class="btn btn-sm btn-outline-secondary bi bi-plus-square" routerLink="/nuevaedu"
+          *ngIf="isLogged">
           Agregar
         </button>
       </div>
@@ -34,20 +30,14 @@
               <p>{{ Educacion.fechainicio }} - {{ Educacion.fechafin }}</p>
             </div>
             <div class="col-6 col-sm-1">
-              <button
-                *ngIf="isLogged"
-                class="bi bi-pencil btn btn-sm btn-outline-dark"
-                routerLink="/editedu/{{ Educacion.id }}"
-              >
+              <button *ngIf="isLogged" class="bi bi-pencil btn btn-sm btn-outline-dark"
+                routerLink="/editedu/{{ Educacion.id }}">
                 Editar
               </button>
             </div>
             <div class="col-6 col-sm-1">
-              <button
-                *ngIf="isLogged"
-                class="bi bi-trash3-fill btn btn-sm btn-outline-danger"
-                (click)="delete(Educacion.id)"
-              >
+              <button *ngIf="isLogged" class="bi bi-trash3-fill btn btn-sm btn-outline-danger"
+                (click)="delete(Educacion.id)">
                 Borrar
               </button>
             </div>

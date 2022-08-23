@@ -9,7 +9,7 @@
         <button
           type="button"
           class="btn btn-sm btn-outline-secondary bi bi-plus-square"
-          routerLink="/nuevaskill"
+          routerLink="/newskill"
           *ngIf="isLogged"
         >
           Agregar
@@ -20,31 +20,45 @@
       <p style="color: rgb(196, 162, 162)">No hay skills para mostrar</p>
     </div>
 
-    <div class="row mt-2">
-      <div class="col list-group-item">
+    <div class="list-group-item">
+      <!--  -->
+      <div class="row row-cols-auto">
         <ul>
           <li *ngFor="let Skill of skills">
-            <circle-progress
-              [percent]="Skill.porcentaje"
-              [outerStrokeColor]="Skill.colorExterno"
-              [innerStrokeColor]="Skill.colorInterno"
-              [imageSrc]="Skill.imgsrc"
-            ></circle-progress>
-            <small>{{ Skill.nombreSkills }}</small>
-            <button
-              *ngIf="isLogged"
-              class="bi bi-pencil btn btn-sm btn-outline-dark"
-              routerLink="/editskill/{{ Skill.id }}"
-            >
-              Editar
-            </button>
-            <button
-              *ngIf="isLogged"
-              class="bi bi-trash3-fill btn btn-sm btn-outline-danger"
-              (click)="delete(Skill.id)"
-            >
-              Borrar
-            </button>
+            <div class="col-12 col-sm my-2">
+              <div class="row">
+                <circle-progress
+                  [percent]="Skill.porcentaje"
+                  [outerStrokeColor]="Skill.colorExterno"
+                  [innerStrokeColor]="Skill.colorInterno"
+                  [imageSrc]="Skill.imgsrc"
+                  [title]="Skill.nombreSkill"
+                ></circle-progress>
+              </div>
+              <div class="row text-center">
+                <p>{{ Skill.nombreSkill }}</p>
+              </div>
+              <div class="row text-center">
+                <div class="col-6">
+                  <button
+                    *ngIf="isLogged"
+                    class="bi bi-pencil btn btn-sm btn-outline-dark"
+                    routerLink="/editskill/{{ Skill.id }}"
+                  >
+                    Editar
+                  </button>
+                </div>
+                <div class="col-6">
+                  <button
+                    *ngIf="isLogged"
+                    class="bi bi-trash3-fill btn btn-sm btn-outline-danger"
+                    (click)="delete(Skill.id)"
+                  >
+                    Borrar
+                  </button>
+                </div>
+              </div>
+            </div>
           </li>
         </ul>
       </div>

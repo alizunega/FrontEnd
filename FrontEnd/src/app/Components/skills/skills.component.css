@@ -1,32 +1,21 @@
+@media(max-width: 767px) {}
+
 /*#skills{
     border-top: .05rem outset rgba(130, 128, 150, 0.447);
-}*/
-.row{
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-}
-small{
-    display: block;
-}
-.col{
-    text-align: center;
-}
-
-.title{
-    padding: .8rem;
 }
 
 .list-group-flush {
     padding-left: .5rem;
     padding-top: 1rem;
     margin-top: .5rem;
-}
+}*/
 
 li {
     list-style: none;
     margin-top: .5rem;
+    width: auto;
     padding-bottom: .5rem;
+    padding-right: 1rem;
     border-bottom: .05rem outset rgba(130, 128, 150, 0.447);
+    float: left;
 }

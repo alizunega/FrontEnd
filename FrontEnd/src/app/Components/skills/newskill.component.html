@@ -1,0 +1,70 @@
+<div class="container-fluid d-flex justify-content-center mt-3 w-50">
+    <div class="row w-100">
+      <div>
+        <form #form="ngForm" novalidate>
+          <div class="form-control col-md-auto">
+            <label for="nombreSkill">Título: </label>
+            <input
+              type="text"
+              id="nombreSkill"
+              name="nombreSkill"
+              [(ngModel)]="nombreSkill"
+              required
+            />
+          </div>
+          <div class="form-control col-md-auto">
+            <label for="imgsrc">Imagen (link): </label>
+            <input
+              type="text"
+              id="imgsrc"
+              name="imgsrc"
+              [(ngModel)]="imgsrc"
+              required
+            />
+          </div>
+          <div class="form-control col-md-auto">
+            <label for="colorInterno">Color Interno: </label>
+  
+            <input
+              type="text"
+              id="colorInterno"
+              name="colorInterno"
+              [(ngModel)]="colorInterno"
+              required
+            />
+          </div>
+          <div class="form-control col-md-auto">
+            <label for="colorExterno">Color Externo: </label>
+            <input
+              type="text"
+              id="colorExterno"
+              name="colorExterno"
+              [(ngModel)]="colorExterno"
+            />
+          </div>
+          <div class="form-control col-md-auto">
+            <label for="porcentaje">Porcentaje: </label>
+            <input
+              type="number"
+              id="porcentaje"
+              name="porcentaje"
+              [(ngModel)]="porcentaje"
+            />
+          </div>
+          <div class="form-control col-md-auto">
+            <button
+              class="btn btn-md btn-outline-success"
+              type="submit"
+              (click)="onCreate()"
+            >
+              Agregar
+            </button>
+            <button class="btn btn-md btn-outline-primary" [routerLink]="'/'">
+              Volver a inicio
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  
