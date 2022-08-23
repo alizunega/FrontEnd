@@ -1,20 +1,20 @@
 
 export class Skills {
   id: number;
-  nombreSkills: string;
+  nombreSkill: string;
   porcentaje: number;
   imgsrc: string;
   colorInterno: string;
   colorExterno: string;
 
   constructor(
-    nombreSkills: string,
+    nombreSkill: string,
     porcentaje: number,
     imgsrc: string,
     colorInterno: string,
     colorExterno: string
   ) {
-    this.nombreSkills = nombreSkills;
+    this.nombreSkill = nombreSkill;
     this.porcentaje = porcentaje;
     this.imgsrc = imgsrc;
     this.colorInterno = colorInterno;

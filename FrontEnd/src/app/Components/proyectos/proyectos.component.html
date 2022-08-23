@@ -1,78 +1,60 @@
-<div class="container-fluid mt-5" id="ir-proyectos">
-    <div class="row mt-3">
-      <div class="col text-start"><h1>Proyectos</h1></div>
-      <div class="col text-end">
-        <a href="#" class="btn btn-sm btn-outline-secondary bi bi-pencil-square"> Editar
-        </a>
-      </div>
-      
-      <div class="card w-3">
-  
+<div class="container-fluid mt-5" *ngIf="proyectos" id="ir-proyectos">
+  <div class="row mt-3">
+    <div class="col text-start"><h1>Proyectos</h1></div>
+    <div class="col text-end">
+      <button
+        routerLink="/newpro"
+        class="btn btn-sm btn-outline-secondary bi bi-pencil-square"
+        *ngIf="isLogged"
+      >
+        Agregar
+      </button>
+    </div>
+    <div class="row" *ngIf="proyectos.length <= 0">
+      <p style="color: rgb(196, 162, 162)">No hay proyectos para mostrar</p>
+    </div>
+
+    <div class="card w-3">
+      <div *ngFor="let Proyecto of proyectos">
         <ul class="list-group list-group-flush">
           <li class="list-group-item">
             <img
               class="card-img-top img-responsive img-thumbnail"
-              src="../../../assets/proyectos/doc-tecnica.png"
-              alt="Proyecto Documentacion tecnica"
+              src="{{ Proyecto.imgproyecto }}"
+              alt="Imagen {{ Proyecto.nombreProyecto }}"
             />
-  
+
             <div class="card-body">
-              <h3 class="card-title">Technical Documentation Page</h3>
+              <h3 class="card-title">{{ Proyecto.nombreProyecto }}</h3>
               <p class="card-text">
-                Proyecto realizado en lenguajes HTML y CSS, para obtener
-                certificación de Diseno Web Responsivo.
+                {{ Proyecto.descripcionProyecto }}
               </p>
               <a
-                href="https://codepen.io/alizunega/full/bGbErop"
+                href="{{ Proyecto.linkproyecto }}"
                 target="_blank"
                 class="btn btn-outline-secondary"
-                >Ir al proyecto <i class="bi bi-arrow-right-square-fill"></i></a
-              >
+                >Ir al proyecto <i class="bi bi-arrow-right-square-fill"></i
+              ></a>
             </div>
-          </li>
-          <li class="list-group-item">
-            <img
-              class="card-img-top img-responsive img-thumbnail"
-              src="../../../assets/proyectos/encuesta.png"
-              alt="Proyecto Formulario de Encuesta"
-            />
-  
-            <div class="card-body">
-              <h3 class="card-title">Survey Form</h3>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up the
-                bulk of the card's content.
-              </p>
-              <a
-                href="https://codepen.io/alizunega/full/pMrRjL"
-                target="_blank"
-                class="btn btn-outline-secondary"
-                >Ir al proyecto <i class="bi bi-arrow-right-square-fill"></i></a
+            <div class="card-footer">
+              <button
+                *ngIf="isLogged"
+                class="bi bi-pencil btn btn-sm btn-outline-dark"
+                routerLink="/editpro/{{ Proyecto.id }}"
               >
-            </div>
-          </li>
-          <li class="list-group-item">
-            <img
-              class="card-img-top img-thumbnail img-responsive"
-              src="../../../assets/proyectos/fanpage.png"
-              alt="Pagina Tributo"
-            />
-            <div class="card-body">
-              <h3 class="card-title">Tribute Page</h3>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up the
-                bulk of the card's content.
-              </p>
-              <a
-                href="https://codepen.io/alizunega/full/dxWodP"
-                target="_blank"
-                class="btn btn-outline-secondary"
-                >Ir al proyecto <i class="bi bi-arrow-right-square-fill"></i></a
+                Editar
+              </button>
+              <button
+                *ngIf="isLogged"
+                class="bi bi-trash3-fill btn btn-sm btn-outline-danger"
+                (click)="delete(Proyecto.id)"
               >
+                Borrar
+              </button>
             </div>
           </li>
         </ul>
       </div>
     </div>
   </div>
-  
+</div>

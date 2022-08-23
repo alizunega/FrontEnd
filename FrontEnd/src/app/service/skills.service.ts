@@ -15,16 +15,16 @@ export class SkillsService {
     return this.http.get<Skills[]>(`${this.URL}/lista`);
   }
 
-  public listaPorId(id: number): Observable<any> {
-    return this.http.get<any>(`${this.URL}/traer/${id}`);
+  public listaPorId(id: number): Observable<Skills> {
+    return this.http.get<Skills>(`${this.URL}/traer/${id}`);
   }
 
   public save(skills: Skills): Observable<Skills> {
     return this.http.post<Skills>(`${this.URL}/crear`, skills);
   }
 
-  public update(id: number, skills: Skills): Observable<Skills> {
-    return this.http.put<Skills>(`${this.URL}/editar/${id}`, skills);
+  public update(id: number, skills: Skills): Observable<any> {
+    return this.http.put<any>(`${this.URL}/editar/${id}`, skills);
   }
 
   public delete(id: number): Observable<any> {

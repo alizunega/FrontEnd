@@ -26,6 +26,10 @@ import { EditExperienciaComponent } from './Components/experiencia/edit-experien
 import { NewEducacionComponent } from './Components/educacion/new-educacion.component';
 import { EditEducacionComponent } from './Components/educacion/edit-educacion.component';
 import { EditAcercaDeComponent } from './Components/acerca-de/edit-acerca-de.component';
+import { NewProyectoComponent } from './Components/proyectos/newproyecto.component';
+import { EditProyectoComponent } from './Components/proyectos/editproyecto.component';
+import { NewSkillComponent } from './Components/skills/newskill.component';
+import { EditSkillComponent } from './Components/skills/editskill.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +51,10 @@ import { EditAcercaDeComponent } from './Components/acerca-de/edit-acerca-de.com
     NewEducacionComponent,
     EditEducacionComponent,
     EditAcercaDeComponent,
+    NewProyectoComponent,
+    EditProyectoComponent,
+    NewSkillComponent,
+    EditSkillComponent,
   ],
   imports: [
     BrowserModule,
@@ -59,7 +67,7 @@ import { EditAcercaDeComponent } from './Components/acerca-de/edit-acerca-de.com
       // valores por defecto por si no ingresa valores en formulario
       radius: 100,
       maxPercent: 100,
-      outerStrokeWidth: 16,
+      outerStrokeWidth: 14,
       innerStrokeWidth: 8,
       outerStrokeColor: "'#677E9B'",
       innerStrokeColor: "'#9EA4AB'",
