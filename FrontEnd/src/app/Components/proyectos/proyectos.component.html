@@ -1,9 +1,9 @@
-<div class="container-fluid mt-5" *ngIf="proyectos" id="ir-proyectos">
-  <div class="row mt-3">
+<div class="container-fluid" id="ir-proyectos" *ngIf="proyectos">
+  <div class="row">
     <div class="col text-start"><h1>Proyectos</h1></div>
     <div class="col text-end">
       <button
-        routerLink="/newpro"
+        routerLink="/newproyecto"
         class="btn btn-sm btn-outline-secondary bi bi-pencil-square"
         *ngIf="isLogged"
       >
@@ -40,7 +40,7 @@
               <button
                 *ngIf="isLogged"
                 class="bi bi-pencil btn btn-sm btn-outline-dark"
-                routerLink="/editpro/{{ Proyecto.id }}"
+                routerLink="/editproyecto/{{ Proyecto.id }}"
               >
                 Editar
               </button>

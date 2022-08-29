@@ -1,49 +1,57 @@
-<div class="container-fluid">
-  <div class="card w-50 mt-4">
-    <div class="card-header text-center">
-      <h1>Login</h1>
-      <p>Debe estar loguead@ para realizar modificaciones en el portfolio.</p>
-    </div>
-    <form #f="ngForm" novalidate>
-      <div class="card-body">
-        <div class="form-outline mb-4">
-          <input
-            type="text"
-            id="nombreUsuario"
-            name="nombreUsuario"
-            class="form-control form-control-md"
-            placeholder="Ingrese un usuario válido"
-            [(ngModel)]="nombreUsuario"
-            required
-          />
+<div class="container-fluid w-100">
+  <div class="row">
+    <div class="col"></div>
+    <div class="col-10 col-md-6">
+      <div class="card">
+        <div class="card-header text-center">
+          <h1>Login</h1>
+          <p>Debe estar loguead@ para realizar modificaciones en el portfolio.</p>
         </div>
-
-        <div class="form-outline mb-3">
-          <input
-            type="password"
-            name="password"
-            id="password"
-            class="form-control form-control-md"
-            placeholder="Ingrese una contraseña válida"
-            [(ngModel)]="password"
-            required
-          />
-        </div>
-        <div class="text-center text-lg-start mt-4 pt-2">
-          <button
-            type="submit"
-            name="submit"
-            class="btn btn-dark btn-md py-2"
-            (click)="onLogin()"
-          >
-            Ingreso
-          </button>
-        </div>
+        <form #f="ngForm" novalidate>
+          <div class="card-body">
+            <div class="form-outline mb-4">
+              <input
+                type="text"
+                id="nombreUsuario"
+                name="nombreUsuario"
+                class="form-control form-control-md"
+                placeholder="Ingrese un usuario válido"
+                [(ngModel)]="nombreUsuario"
+                required
+              />
+            </div>
+    
+            <div class="form-outline mb-3">
+              <input
+                type="password"
+                name="password"
+                id="password"
+                class="form-control form-control-md"
+                placeholder="Ingrese una contraseña válida"
+                [(ngModel)]="password"
+                required
+              />
+            </div>
+            <div class="text-center text-lg-start mt-4 pt-2">
+              <button
+                type="submit"
+                name="submit"
+                class="btn btn-success btn-md py-2"
+                (click)="onLogin()"
+              >
+                Ingreso
+              </button>
+            </div>
+          </div>
+          <div class="text-center text-lg-start mt-4 pt-2 px-3">
+            <a href="/#" class="btn btn-secondary btn-md px-2">Volver a Inicio</a>
+          </div>
+        </form>
+        
+        <div class="card-footer text-muted mt-1 text-center">Copyright © 2022</div>
       </div>
-    </form>
-    <div class="text-center text-lg-start mt-4 pt-2 px-3">
-      <a href="/#" class="btn btn-secondary btn-sm px-2">Volver a Inicio</a>
     </div>
-    <div class="card-footer text-muted mt-1 text-center">Copyright © 2022</div>
+    <div class="col"></div>
   </div>
+  
 </div>

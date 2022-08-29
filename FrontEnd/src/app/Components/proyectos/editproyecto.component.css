@@ -1,0 +1,10 @@
+.form-control {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: .5rem;
+}
+
+input {
+    width: 25rem;
+}

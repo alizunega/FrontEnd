@@ -1,4 +1,3 @@
-
 export class Proyecto {
   id: number;
   nombreProyecto: string;

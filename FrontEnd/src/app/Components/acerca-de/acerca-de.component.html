@@ -1,36 +1,27 @@
-<div class="container-fluid" *ngIf="persona" id="ir-acerca-de">
+<div class="container-fluid" *ngIf="persona" id="encabezado"> 
   <div class="row no-gutters mb-2 pb-1 align-items-start">
     <!-- columna foto -->
-    <div class="col-3 d-inline-block position-relative text-center">
+    <div class="col-12 col-sm-3 d-inline-block position-relative text-center">
       <img
         class="img-fluid foto-perfil"
         id="img"
         name="img"
-        src="{{ persona.img }}"
+        src="{{persona.img}}"
         alt="Foto Perfil"
       />
     </div>
 
     <!-- columna nombre y titulo -->
-    <div class="col-5 text-center">
+    <div class="col-12 col-sm-4 text-center">
       <h3 id="nombre" name="nombre">
         {{ persona.nombre }} {{ persona.apellido }}
       </h3>
-      <br />
       <h4>{{ persona.titulo }}</h4>
-      <!--  
-      <button
-        type="button"
-        class="btn btn-outline-secondary bi bi-pencil-square"
-        *ngIf="isLogged"
-        routerLink="/editAbout/{{ persona.id }}"
-        title="Editar"
-      > Editar </button> -->
     </div>
     <!-- columna acerca de mi -->
-    <div class="col-4">
-      <h2>Acerca de mi:</h2>
-      <p id="about">{{ persona.about }}</p>
+    <div class="col-12 col-sm-5" id="ir-acerca-de">
+      <h2 class="text-center mt-1">Acerca de mi:</h2>
+      <p id="about" class="text-start">{{ persona.about }}</p>
       <button
         type="button"
         class="btn btn-outline-secondary bi bi-pencil-square"

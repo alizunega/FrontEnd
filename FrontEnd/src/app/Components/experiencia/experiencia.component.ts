@@ -22,7 +22,6 @@ export class ExperienciaComponent implements OnInit {
 
   ngOnInit(): void {
     this.cargarExperiencia();
-
     if (this.tokenService.getToken()) {
       this.isLogged = true;
     } else {
@@ -39,9 +38,14 @@ export class ExperienciaComponent implements OnInit {
   delete(id: number): void {
     if (id != undefined) {
       this.sExperiencia.delete(id).subscribe((success) => {
+        console.log(success);
+        alert('Experiencia eliminada');
         this.cargarExperiencia();
       });
+    } else {
+      alert('No se pudo eliminiar');
     }
+
     this.router.navigate(['']);
   }
 }

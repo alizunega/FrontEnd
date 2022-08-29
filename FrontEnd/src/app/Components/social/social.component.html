@@ -1,43 +1,78 @@
-<div class="list-group bg-dark d-flex flex-row">
-  <a
-    href="https://github.com/alizunega"
-    target="_blank"
-    class="list-group-item list-group-item-action bg-dark"
-  >
-    <i class="bi bi-github btn btn-outline-secondary"></i>
-  </a>
-  <a
-    href="https://www.linkedin.com/in/alicialzunegamza"
-    target="_blank"
-    class="list-group-item list-group-item-action bg-dark"
-  >
-    <i class="bi bi-linkedin btn btn-outline-secondary"></i>
-  </a>
-  <a
-    href="https://t.me/AlitaZ16"
-    target="_blank"
-    class="list-group-item list-group-item-action bg-dark"
-  >
-    <i class="bi bi-telegram btn btn-outline-secondary"></i>
-  </a>
-  <a
-    href="mailto:alizunega84@gmail.com"
-    target="_blank"
-    class="list-group-item list-group-item-action bg-dark"
-    ><i class="bi bi-envelope btn btn-outline-secondary"></i
-  ></a>
-  <button
-    (click)="login()"
-    class="bi bi-box-arrow-in-left btn btn-outline-secondary list-group-item list-group-item-action"
-    *ngIf="!isLogged"
-  >
-    Ingresar
-  </button>
-  <button
-    (click)="onLogOut()"
-    class="bi bi-box-arrow-in-right btn btn-outline-secondary list-group-item list-group-item-action"
-    *ngIf="isLogged"
-  >
-    Salir
-  </button>
-</div>
+<nav class="navbar navbar-expand-lg navbar-dark w-100">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="https://acortar.link/ViMdKS" target="_blank"
+      ><img
+        src="../../../assets/APLogo.png"
+        alt="Logo Argentina Programa"
+        class="bg-dark text-light"
+    /></a>
+    <button
+      class="navbar-toggler navbar-dark"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#social"
+      aria-controls="social"
+      aria-expanded="false"
+      aria-label="Redes Sociales"
+    >
+      <span class="navbar-toggler-icon"> </span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="social">
+      <ul class="nav navbar-nav ml-auto mb-lg-0 bg-dark w-100">
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="mailto:alizunega84@gmail.com"
+            target="_blank"
+            ><i class="bi bi-envelope"></i
+          ></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://t.me/AlitaZ16" target="_blank"
+            ><i class="bi bi-telegram"></i
+          ></a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="https://www.linkedin.com/in/alicialzunegamza"
+            target="_blank"
+            ><i class="bi bi-linkedin"></i
+          ></a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="https://github.com/alizunega"
+            target="_blank"
+            ><i class="bi bi-github"></i
+          ></a>
+        </li>
+        <li class="nav-item">
+          <button
+            (click)="login()"
+            *ngIf="!isLogged"
+            class="btn bg-dark text-light"
+          >
+            <i class="bi bi-box-arrow-in-left"></i>LogIn
+          </button>
+          <button
+            (click)="onLogOut()"
+            *ngIf="isLogged"
+            class="btn bg-dark text-light"
+          >
+            <i class="bi bi-box-arrow-in-right"></i>
+            LogOut
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- JavaScript Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+  crossorigin="anonymous"
+></script>
