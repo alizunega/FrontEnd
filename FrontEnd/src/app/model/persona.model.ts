@@ -5,6 +5,7 @@ export class Persona {
   img: string;
   about: string;
   titulo: string;
+
   constructor(
     nombre: string,
     apellido: string,

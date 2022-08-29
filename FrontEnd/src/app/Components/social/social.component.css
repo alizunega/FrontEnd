@@ -1,21 +1,22 @@
+i {
+    font-size: 2rem;
+    color: aliceblue;
 
-.list-group-item{
-    border: 0;
+}
+
+.nav-item,
+button {
+    border-color: azure;
+    border-width: .1rem;
+    align-items: center;
     text-align: center;
-    background-color: #445067;
-    color: white;
-}
-a{
-    text-align: center;
-    color: white;
 }
 
-i{
-    font-size: 1.5rem;
-    color: white;
+img {
+    width: 40%;
 }
 
-button{
-    padding: 1rem;
-    margin: 0.5rem;
+ul {
+    justify-content: space-between;
+    margin-right: .5rem;
 }

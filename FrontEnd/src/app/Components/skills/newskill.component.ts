@@ -11,8 +11,8 @@ import { SkillsService } from 'src/app/service/skills.service';
 export class NewSkillComponent implements OnInit {
   nombreSkill: string;
   imgsrc: string;
-  colorInterno: string;
-  colorExterno: string;
+  colorInterno: string='#9EA4AB';
+  colorExterno: string ='#677E9B';
   porcentaje: number;
 
   constructor(private skillService: SkillsService, private router: Router) {}

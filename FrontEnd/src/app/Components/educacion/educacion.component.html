@@ -1,18 +1,18 @@
 <!-- id es para que tome el link interno del footer -->
-<div class="container-fluid" *ngIf="educacion" id="ir-educacion">
+<div class="container-fluid" id="ir-educacion" *ngIf="educacion">
   <div class="list-group-flush w-90">
     <div class="row">
       <div class="col text-start">
         <h1>Educación</h1>
       </div>
-      <div class="col text-end">
+      <div class="col text-end ">
         <button type="button" class="btn btn-sm btn-outline-secondary bi bi-plus-square" routerLink="/nuevaedu"
           *ngIf="isLogged">
           Agregar
         </button>
       </div>
     </div>
-    <div class="row" *ngIf="educacion.length <= 0">
+    <div class="row" *ngIf="educacion.length == 0">
       <p style="color: rgb(196, 162, 162)">No hay educacion para mostrar</p>
     </div>
 

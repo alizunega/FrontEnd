@@ -1,23 +1,23 @@
-*{
+* {
+	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 	list-style: none;
 	text-decoration: none;
 	border: none;
-	outline: none;
-}
-
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    min-height: 100vh;
-	min-width: 100vw;
+	outline: unset;
+	display: flex;
 	
 }
 
-html{
-    min-height: 100%;
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	min-height: 100vh;
 	min-width: 100vw;
+	display: block;
+	height: 100%;
 }
 
-
-
+html {
+	height: 100%;
+}

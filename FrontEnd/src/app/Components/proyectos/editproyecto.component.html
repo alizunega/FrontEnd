@@ -1,1 +1,64 @@
-<p>editproyecto works!</p>
+<div
+  class="container-fluid d-flex justify-content-center mt-3 w-50"
+  *ngIf="proyecto"
+>
+  <div class="row w-100">
+    <div>
+      <form #form="ngForm" novalidate>
+        <div class="form-control col-md-auto">
+          <label for="nombreProyecto">Nombre del Proyecto:</label>
+          <input
+            type="text"
+            id="nombreProyecto"
+            name="nombreProyecto"
+            [(ngModel)]="proyecto.nombreProyecto"
+            required
+          />
+        </div>
+        <div class="form-control col-md-auto">
+          <label for="imgproyecto">Imagen (link):</label>
+          <input
+            type="text"
+            id="imgproyecto"
+            name="imgproyecto"
+            [(ngModel)]="proyecto.imgproyecto"
+            required
+          />
+        </div>
+        <div class="form-control col-md-auto">
+          <label for="descripcionProyecto">Descripcion del Proyecto:</label>
+          <input
+            type="text"
+            id="descripcionProyecto"
+            name="descripcionProyecto"
+            [(ngModel)]="proyecto.descripcionProyecto"
+            required
+          />
+        </div>
+        <div class="form-control col-md-auto">
+          <label for="linkproyecto">Link del proyecto:</label>
+          <input
+            type="text"
+            id="linkproyecto"
+            name="linkproyecto"
+            [(ngModel)]="proyecto.linkproyecto"
+            required
+          />
+        </div> 
+        <div class="form-control col-md-auto">
+          <button
+            type="submit"
+            class="btn btn-md btn-success"
+            (click)="onUpdate()"
+          >
+            Actualizar
+          </button>
+          <button class="btn btn-md btn-outline-primary" [routerLink]="'/'">
+            Volver sin cambios
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+

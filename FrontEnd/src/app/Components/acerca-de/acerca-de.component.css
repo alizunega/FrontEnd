@@ -1,7 +1,7 @@
-@media (max-width: 767.98px) { 
+@media screen and (max-width: 500px) { 
     .foto-perfil{
-        width: 50%;
-        height: 30%;
+        width: 20%;
+        height: 10%;
         margin: auto;
         display: block;
     } 
@@ -11,21 +11,23 @@
         text-align: center;
         justify-content: center;
     }
+    h3{
+        margin-bottom: 0.3rem;
+        padding-bottom: 0.1rem;
+    }
+    button{
+        font-size: 10px;
+    }
 }
+
 .foto-perfil{
     width: 100%;
     max-width: 200px;
     height: auto;
     box-shadow: 0.6rem 0.6rem 3rem rgb(104, 102, 102);
 }
-h5,h3{
+
+h4,h3{
     padding-top: 1rem;
 }
 
-#btn-img{
-    position: absolute; 
-    bottom: 0; 
-    left: 50%; 
-
-
-}

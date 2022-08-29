@@ -19,12 +19,12 @@ export class ProyectoService {
     return this.http.post<Proyecto>(`${this.URL}/crear`, proyecto);
   }
 
-  public listaPorId(id: number): Observable<any> {
-    return this.http.get<any>(`${this.URL}/traer/${id}`);
+  public listaPorId(id: number): Observable<Proyecto> {
+    return this.http.get<Proyecto>(`${this.URL}/traer/${id}`);
   }
 
-  public update(id: number, proyecto: Proyecto): Observable<Proyecto> {
-    return this.http.put<Proyecto>(`${this.URL}/editar/${id}`, proyecto);
+  public update(id: number, proyecto: Proyecto): Observable<any> {
+    return this.http.put<any>(`${this.URL}/editar/${id}`, proyecto);
   }
 
   public delete(id: number): Observable<any> {
