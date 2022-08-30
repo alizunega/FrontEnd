@@ -9,7 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { HeaderComponent } from './Components/header/header.component';
-import { LogoApComponent } from './Components/logo-ap/logo-ap.component';
+
 import { BannerComponent } from './Components/banner/banner.component';
 import { SocialComponent } from './Components/social/social.component';
 import { AcercaDeComponent } from './Components/acerca-de/acerca-de.component';
@@ -35,7 +35,6 @@ import { EditSkillComponent } from './Components/skills/editskill.component';
   declarations: [
     AppComponent,
     HeaderComponent,
-    LogoApComponent,
     BannerComponent,
     SocialComponent,
     AcercaDeComponent,
