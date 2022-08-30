@@ -31,6 +31,7 @@ export class NewExperienciaComponent implements OnInit {
     );
 
     this.sExperiencia.save(expe).subscribe((response) => {
+      alert("Experiencia añadida");
       this.sExperiencia.lista();
       this.router.navigate(['']);
     });

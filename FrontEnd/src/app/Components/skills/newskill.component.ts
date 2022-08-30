@@ -25,8 +25,7 @@ export class NewSkillComponent implements OnInit {
       this.porcentaje,
       this.imgsrc,
       this.colorInterno,
-      this.colorExterno,
-      
+      this.colorExterno 
     );
 
     this.skillService.save(skill).subscribe((response) => {

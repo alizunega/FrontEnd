@@ -1,5 +1,21 @@
+@media screen and (max-width: 400px) {
+    img {
+        width: 50%;
+        height: 60px;
+    }
+    ul{ 
+        width: 100%;
+        justify-content: center;
+    }
+    li{
+        margin:0;
+        padding: 0;
+        width: 100%;
+    }
+
+}
 i {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: aliceblue;
 
 }
@@ -13,10 +29,17 @@ button {
 }
 
 img {
-    width: 40%;
+    width: 320px;
+    height: 200px;
 }
 
 ul {
-    justify-content: space-between;
+    width: 100%;
+    justify-content: end;
     margin-right: .5rem;
+}
+li{
+    width: auto;
+    margin: .6rem;
+    padding: .6rem;
 }
