@@ -1,63 +1,84 @@
-<div class="container-fluid d-flex justify-content-center mt-3">
-  <div class="row w-100">
-    <div class="col-3 col-md p-0 g-0"></div>
-    <div class="col-6 col-md w-100 g-0">
-      <form #form="ngForm" novalidate>
-        <div class="form-control col-md-auto">
-          <label for="titulo">Titulo</label>
-          <input
-            type="text"
-            id="titulo"
-            name="titulo"
-            [(ngModel)]="titulo"
-            required
-          />
-        </div>
-        <div class="form-control col-md-auto">
-          <label for="nombreInstitucion">Nombre Institucion</label>
-          <input
-            type="text"
-            id="nombreInstitucion"
-            name="nombreInstitucion"
-            [(ngModel)]="nombreInstitucion"
-            required
-          />
-        </div>
-        <div class="form-control col-md-auto">
-          <label for="fechainicio">Fecha Inicio</label>
-          <input
-            type="text"
-            id="fechainicio"
-            name="fechainicio"
-            [(ngModel)]="fechainicio"
-            required
-          />
-        </div>
-        <div class="form-control col-md-auto">
-          <label for="fechafin"
-            >Fecha Fin <small>(Dejar vacio si es actual)*</small></label
-          >
-          <input
-            type="text"
-            id="fechafin"
-            name="fechafin"
-            [(ngModel)]="fechafin"
-          />
-        </div>
-        <div class="form-control col-md-auto">
-          <button
-            class="btn btn-md btn-outline-success"
-            type="submit"
-            (click)="onCreate()"
-          >
-            Agregar
-          </button>
-          <button class="btn btn-md btn-outline-primary" [routerLink]="'/'">
-            Volver a inicio
-          </button>
-        </div>
-      </form>
+<div class="container-fluid mt-3">
+  <form #f="ngForm" class="needs-validation" novalidate>
+    <div class="row">
+      <div class="col-12 col-md-4 text-start">
+        <label for="titulo" class="form-label">Título:</label>
+      </div>
+      <div class="col-12 col-md">
+        <input
+          type="text"
+          id="titulo"
+          name="titulo"
+          [(ngModel)]="titulo"
+          required
+          class="form-control"
+        />
+        <div class="invalid-feedback">Campo obligatorio.</div>
+        <div class="valid-feedback">Campo completo.</div>
+      </div>
     </div>
-    <div class="col-3 col-md p-0 g-0"></div>
-  </div>
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <label for="nombreInstitucion" class="form-label"
+          >Nombre de Institución:
+        </label>
+      </div>
+      <div class="col-12 col-md">
+        <input
+          type="text"
+          required
+          class="form-control"
+          id="nombreInstitucion"
+          name="nombreInstitucion"
+          [(ngModel)]="nombreInstitucion"
+        />
+        <div class="invalid-feedback">Campo obligatorio.</div>
+        <div class="valid-feedback">Campo completo.</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <label for="fechainicio" class="form-label">Fecha inicio:</label>
+      </div>
+      <div class="col-12 col-md">
+        <input
+          type="text"
+          required
+          class="form-control"
+          name="fechainicio"
+          id="fechainicio"
+          [(ngModel)]="fechainicio"
+        />
+        <div class="invalid-feedback">Campo obligatorio.</div>
+        <div class="valid-feedback">Campo completo.</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <label for="fechafin" class="form-label">Fecha fin:</label>
+      </div>
+      <div class="col-12 col-md">
+        <input
+          type="text"
+          class="form-control"
+          name="fechafin"
+          id="fechafin"
+          [(ngModel)]="fechafin"
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <button type="submit" class="btn btn-success" (click)="onCreate()">
+          Enviar
+        </button>
+      </div>
+      <div class="col">
+        <button class="btn btn-primary" [routerLink]="'/'">
+          Volver
+        </button>
+      </div>
+    </div>
+  </form>
 </div>
+

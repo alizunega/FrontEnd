@@ -35,6 +35,7 @@ export class ProyectosComponent implements OnInit {
   delete(id: number): void {
     if (id != undefined) {
       this.proService.delete(id).subscribe((success) => {
+        alert('Proyecto eliminado');
         this.cargarProyectos();
       });
     }

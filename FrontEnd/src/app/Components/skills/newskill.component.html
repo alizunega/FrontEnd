@@ -1,70 +1,97 @@
-<div class="container-fluid d-flex justify-content-center mt-3 w-50">
-    <div class="row w-100">
-      <div>
-        <form #form="ngForm" novalidate>
-          <div class="form-control col-md-auto">
-            <label for="nombreSkill">Título: </label>
-            <input
-              type="text"
-              id="nombreSkill"
-              name="nombreSkill"
-              [(ngModel)]="nombreSkill"
-              required
-            />
-          </div>
-          <div class="form-control col-md-auto">
-            <label for="imgsrc">Imagen (link): </label>
-            <input
-              type="text"
-              id="imgsrc"
-              name="imgsrc"
-              [(ngModel)]="imgsrc"
-              required
-            />
-          </div>
-          <div class="form-control col-md-auto">
-            <label for="colorInterno">Color Interno: </label>
-  
-            <input
-              type="text"
-              id="colorInterno"
-              name="colorInterno"
-              [(ngModel)]="colorInterno"
-              required
-            />
-          </div>
-          <div class="form-control col-md-auto">
-            <label for="colorExterno">Color Externo: </label>
-            <input
-              type="text"
-              id="colorExterno"
-              name="colorExterno"
-              [(ngModel)]="colorExterno"
-            />
-          </div>
-          <div class="form-control col-md-auto">
-            <label for="porcentaje">Porcentaje: </label>
-            <input
-              type="number"
-              id="porcentaje"
-              name="porcentaje"
-              [(ngModel)]="porcentaje"
-            />
-          </div>
-          <div class="form-control col-md-auto">
-            <button
-              class="btn btn-md btn-outline-success"
-              type="submit"
-              (click)="onCreate()"
-            >
-              Agregar
-            </button>
-            <button class="btn btn-md btn-outline-primary" [routerLink]="'/'">
-              Volver a inicio
-            </button>
-          </div>
-        </form>
+<div class="container-fluid mt-3">
+  <form #f="ngForm" class="needs-validation" novalidate>
+    <div class="row">
+      <div class="col-12 col-md-4 text-start">
+        <label for="nombreSkill" class="form-label">Tìtulo:</label>
+      </div>
+      <div class="col-12 col-md">
+        <input
+          type="text"
+          id="nombreSkill"
+          name="nombreSkill"
+          [(ngModel)]="nombreSkill"
+          required
+          class="form-control"
+        />
+        <div class="invalid-feedback">Campo obligatorio.</div>
+        <div class="valid-feedback">Campo completo.</div>
       </div>
     </div>
-  </div>
-  
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <label for="imgsrc" class="form-label">Imagen (link):</label>
+      </div>
+      <div class="col-12 col-md">
+        <input
+          type="text"
+          required
+          class="form-control"
+          id="imgsrc"
+          name="imgsrc"
+          [(ngModel)]="imgsrc"
+        />
+        <div class="invalid-feedback">Campo obligatorio.</div>
+        <div class="valid-feedback">Campo completo.</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6 col-md-4">
+        <label for="colorInterno" class="form-label">Color Interno:</label>
+      </div>
+      <div class="col-6 col-md">
+        <input
+          type="color"
+          required
+          class="form-control form-control-color"
+          name="colorInterno"
+          id="colorInterno"
+          [(ngModel)]="colorInterno"
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6 col-md-4">
+        <label for="colorExterno" class="form-label">Color externo:</label>
+      </div>
+      <div class="col-6 col-md">
+        <input
+          type="color"
+          class="form-control form-control-color"
+          name="colorExterno"
+          id="colorExterno"
+          [(ngModel)]="colorExterno"
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <label for="porcentaje" class="form-label">Porcentaje:</label>
+      </div>
+      <div class="col-12 col-md">
+        <input
+          type="number"
+          min="0"
+          max="100"
+          id="porcentaje"
+          name="porcentaje"
+          [(ngModel)]="porcentaje"
+          required
+          class="form-control"
+        />
+        <div class="invalid-feedback">Campo obligatorio.</div>
+        <div class="valid-feedback">Campo completo.</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <button type="submit" class="btn btn-success" (click)="onCreate()">
+          Enviar
+        </button>
+      </div>
+      <div class="col">
+        <button class="btn btn-primary" [routerLink]="'/'">Volver</button>
+      </div>
+    </div>
+  </form>
+</div>
+

@@ -39,6 +39,7 @@ export class SkillsComponent implements OnInit {
   delete(id: number): void {
     if (id != undefined) {
       this.skillsService.delete(id).subscribe((success) => {
+        alert('Eliminada');
         this.cargarSkills();
       });
     }

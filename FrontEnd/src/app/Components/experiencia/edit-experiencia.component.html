@@ -1,67 +1,83 @@
-<div
-  class="container-fluid d-flex justify-content-center mt-3"
-  *ngIf="expLab"
->
-  <div class="row w-100">
-    <div class="col-3 col-md p-0 g-0"></div>
-    <div class="col-6 col-md w-100 g-0">
-      <form #form="ngForm" novalidate>
-        <div class="form-control col-md-auto">
-          <label for="nombreExpe">Nombre Empresa</label>
-          <input
-            type="text"
-            id="nombreExpe"
-            name="nombreExpe"
-            [(ngModel)]="expLab.nombreExpe"
-            required
-          />
-        </div>
-        <div class="form-control col-md-auto">
-          <label for="descripcionExpe">Descripción del empleo</label>
-          <input
-            type="text"
-            id="descripcionExpe"
-            name="descripcionExpe"
-            [(ngModel)]="expLab.descripcionExpe"
-            required
-          />
-        </div>
-        <div class="form-control col-md-auto">
-          <label for="fechainicio">Fecha Inicio</label>
-          <input
-            type="text"
-            id="fechainicio"
-            name="fechainicio"
-            [(ngModel)]="expLab.fechainicio"
-            required
-            placeholder="Formato mm-aaaa"
-          />
-        </div>
-        <div class="form-control col-md-auto">
-          <label for="fechafin"
-            >Fecha Fin <small>(Dejar vacio si es actual*)</small></label
-          >
-          <input
-            type="text"
-            id="fechafin"
-            name="fechafin"
-            [(ngModel)]="expLab.fechafin"
-          />
-        </div>
-        <div class="form-control col-md-auto">
-          <button
-            type="submit"
-            class="btn btn-md btn-success"
-            (click)="onUpdate()"
-          >
-            Actualizar
-          </button>
-          <button class="btn btn-md btn-outline-primary" [routerLink]="'/'">
-            Volver sin cambios
-          </button>
-        </div>
-      </form>
+<div class="container-fluid mt-3">
+  <form #f="ngForm" class="needs-validation" novalidate>
+    <div class="row">
+      <div class="col-12 col-md-4 text-start">
+        <label for="nombreExpe" class="form-label">Nombre Empresa:</label>
+      </div>
+      <div class="col-12 col-md">
+        <input
+          type="text"
+          id="nombreExpe"
+          name="nombreExpe"
+          [(ngModel)]="expLab.nombreExpe"
+          required
+          class="form-control"
+        />
+        <div class="invalid-feedback">Campo obligatorio.</div>
+        <div class="valid-feedback">Campo completo.</div>
+      </div>
     </div>
-    <div class="col-3 col-md p-0 g-0"></div>
-  </div>
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <label for="descripcionExpe" class="form-label"
+          >Descripcion empleo:</label
+        >
+      </div>
+      <div class="col-12 col-md">
+        <input
+          type="text"
+          required
+          class="form-control"
+          id="descripcionExpe"
+          name="descripcionExpe"
+          [(ngModel)]="expLab.descripcionExpe"
+        />
+        <div class="invalid-feedback">Campo obligatorio.</div>
+        <div class="valid-feedback">Campo completo.</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <label for="fechainicio" class="form-label">Fecha inicio:</label>
+      </div>
+      <div class="col-12 col-md">
+        <input
+          type="text"
+          required
+          class="form-control"
+          name="fechainicio"
+          id="fechainicio"
+          [(ngModel)]="expLab.fechainicio"
+        />
+        <div class="invalid-feedback">Campo obligatorio.</div>
+        <div class="valid-feedback">Campo completo.</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <label for="fechafin" class="form-label">Fecha fin:</label>
+      </div>
+      <div class="col-12 col-md">
+        <input
+          type="text"
+          class="form-control"
+          name="fechafin"
+          id="fechafin"
+          [(ngModel)]="expLab.fechafin"
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <button type="submit" class="btn btn-success" (click)="onUpdate()">
+          Enviar
+        </button>
+      </div>
+      <div class="col">
+        <button class="btn btn-primary" [routerLink]="'/'">
+          Volver
+        </button>
+      </div>
+    </div>
+  </form>
 </div>
