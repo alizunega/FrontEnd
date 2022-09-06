@@ -23,6 +23,31 @@ export class EditSkillComponent implements OnInit {
     });
   }
   onUpdate(): void {
+    //deshabilitar el envío de formularios si hay campos no válidos
+    (function () {
+      'use strict';
+
+      // Obtener todos los formularios a los que queremos aplicar estilos de validación de Bootstrap personalizados
+      var forms = document.querySelectorAll('.needs-validation');
+
+      // Bucle sobre ellos y evitar el envío
+      Array.prototype.slice.call(forms).forEach(function (form) {
+        form.addEventListener(
+          'submit',
+          function (event: any): void {
+            if (!form.checkValidity()) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+
+            form.classList.add('was-validated');
+          },
+          false
+        );
+      });
+    })();
+
+    //verificados los campos, realiza la actualizacion
     const id: number = this.activatedRouter.snapshot.params['id'];
     this.skillService.update(id, this.skill).subscribe((data) => {
       this.skillService = data;

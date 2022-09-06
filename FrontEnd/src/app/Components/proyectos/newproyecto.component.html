@@ -1,62 +1,86 @@
-<div class="container-fluid d-flex justify-content-center mt-3">
-  <div class="row w-100">
-    <div class="col-3 col-md p-0 g-0"></div>
-    <div class="col-6 col-md w-100 g-0">
-      <form #form="ngForm" novalidate>
-        <div class="form-control col-md-auto">
-          <label for="nombreProyecto">Nombre del Proyecto: </label>
-          <input
-            type="text"
-            id="nombreProyecto"
-            name="nombreProyecto"
-            [(ngModel)]="nombreProyecto"
-            required
-          />
-        </div>
-        <div class="form-control col-md-auto">
-          <label for="imgproyecto">Imagen (link): </label>
-          <input
-            type="text"
-            id="imgproyecto"
-            name="imgproyecto"
-            [(ngModel)]="imgproyecto"
-            required
-          />
-        </div>
-        <div class="form-control col-md-auto">
-          <label for="descripcionProyecto">Descripcion del proyecto: </label>
 
-          <input
-            type="text"
-            id="descripcionProyecto"
-            name="descripcionProyecto"
-            [(ngModel)]="descripcionProyecto"
-            required
-          />
-        </div>
-        <div class="form-control col-md-auto">
-          <label for="linkproyecto">Link del Proyecto: </label>
-          <input
-            type="text"
-            id="linkproyecto"
-            name="linkproyecto"
-            [(ngModel)]="linkproyecto"
-          />
-        </div>
-        <div class="form-control col-md-auto">
-          <button
-            class="btn btn-md btn-outline-success"
-            type="submit"
-            (click)="onCreate()"
-          >
-            Agregar
-          </button>
-          <button class="btn btn-md btn-outline-primary" [routerLink]="'/'">
-            Volver a inicio
-          </button>
-        </div>
-      </form>
+<div class="container-fluid mt-3">
+  <form #f="ngForm" class="needs-validation" novalidate>
+    <div class="row">
+      <div class="col-12 col-md-4 text-start">
+        <label for="nombreProyecto" class="form-label">Nombre proyecto:</label>
+      </div>
+      <div class="col-12 col-md">
+        <input
+          type="text"
+          id="nombreProyecto"
+          name="nombreProyecto"
+          [(ngModel)]="nombreProyecto"
+          required
+          class="form-control"
+        />
+        <div class="invalid-feedback">Campo obligatorio.</div>
+        <div class="valid-feedback">Campo completo.</div>
+      </div>
     </div>
-    <div class="col-3 col-md p-0 g-0"></div>
-  </div>
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <label for="imgproyecto" class="form-label">Imagen (link):</label>
+      </div>
+      <div class="col-12 col-md">
+        <input
+          type="text"
+          required
+          class="form-control"
+          id="imgproyecto"
+          name="imgproyecto"
+          [(ngModel)]="imgproyecto"
+        />
+        <div class="invalid-feedback">Campo obligatorio.</div>
+        <div class="valid-feedback">Campo completo.</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <label for="descripcionProyecto" class="form-label"
+          >Descripción del proyecto:</label
+        >
+      </div>
+      <div class="col-12 col-md">
+        <textarea
+          type="text"
+          required
+          class="form-control"
+          name="descripcionProyecto"
+          id="descripcionProyecto"
+          [(ngModel)]="descripcionProyecto"
+        ></textarea>
+
+        <div class="invalid-feedback">Campo obligatorio.</div>
+        <div class="valid-feedback">Campo completo.</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <label for="linkproyecto" class="form-label"
+          >Link hacia el proyecto:</label
+        >
+      </div>
+      <div class="col-12 col-md">
+        <input
+          type="text"
+          class="form-control"
+          name="linkproyecto"
+          id="linkproyecto"
+          [(ngModel)]="linkproyecto"
+        />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <button type="submit" class="btn btn-success" (click)="onCreate()">
+          Enviar
+        </button>
+      </div>
+      <div class="col">
+        <button class="btn btn-primary" [routerLink]="'/'">Volver</button>
+      </div>
+    </div>
+  </form>
 </div>

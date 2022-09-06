@@ -1,0 +1,16 @@
+@media screen and (min-width:700px) {
+    .container-fluid{
+        width: 50%;
+        
+    }
+    
+    
+}
+.row {
+    margin: .5rem;
+    padding: 1rem;
+}
+
+form {
+    outline: 1px solid rgb(108, 108, 129);
+}

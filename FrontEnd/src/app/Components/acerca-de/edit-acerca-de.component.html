@@ -1,64 +1,76 @@
-<div class="container-fluid w-50 g-3" *ngIf="persona">
-  <form
-    #form="ngForm"
-    (ngSubmit)="onUpdate()"
-    novalidate
-    class="g-3 align-items-center py-3"
-  >
-    <div class="row form-control mb-3">
-      <label for="nombre" class="col-3">Nombre </label>
+<div class="container-fluid mt-3">
+  <form #form="ngForm" class="needs-validation" novalidate>
+    <div class="row">
+      <label for="nombre" class="form-label">Nombre: </label>
       <input
-        class="col-9"
+        class="form-control"
         type="text"
         id="nombre"
         name="nombre"
         [(ngModel)]="persona.nombre"
         required
+        maxlength="50"
       />
+      <div class="invalid-feedback">Campo obligatorio.</div>
+      <div class="valid-feedback">Campo correcto.</div>
     </div>
-    <div class="row form-control mb-3">
-      <label class="col-3" for="apellido">Apellido </label>
+    <div class="row">
+      <label class="form-label" for="apellido">Apellido: </label>
       <input
-        class="col-9"
+        class="form-control"
         type="text"
         id="apellido"
         name="apellido"
         [(ngModel)]="persona.apellido"
         required
+        maxlength="50"
       />
+      <div class="invalid-feedback">Campo obligatorio.</div>
+      <div class="valid-feedback">Campo completo.</div>
     </div>
-    <div class="row form-control mb-3">
-      <label class="col-3" for="titulo">Título </label>
+    <div class="row mb-3">
+      <label class="form-label" for="titulo">Título: </label>
       <input
-        class="col-9"
+        class="form-control"
         type="text"
         id="titulo"
         name="titulo"
         [(ngModel)]="persona.titulo"
         required
       />
+      <div class="invalid-feedback">Campo obligatorio.</div>
+      <div class="valid-feedback">Campo completo.</div>
     </div>
-    <div class="row form-control mb-3">
-      <label class="col-3" for="about">Acerca de... </label>
-      <input
-        class="col-9"
-        rows="2"
-        type="textarea"
-        id="about"
-        name="about"
-        [(ngModel)]="persona.about"
-        required
-      />
+    <div class="row mb-3">
+      <label class="form-label" for="about">Acerca de mi: </label>
+      <textarea class="form-control"
+      rows="3"
+      type="textarea"
+      id="about"
+      name="about"
+      [(ngModel)]="persona.about"
+      minlength="30"
+      required>
+        
+      </textarea>
+      <div class="invalid-feedback">
+        Campo obligatorio, mínimo 30 caracteres.
+      </div>
+      <div class="valid-feedback">Campo completo.</div>
     </div>
 
-    <div class="row form-control d-flex">
+    <div class="row">
       <div class="col-sm-6 col-6">
-        <button type="submit" class="btn btn-md btn-outline-success">
+        <button
+          type="submit"
+          class="btn btn-md btn-outline-success"
+          (click)="onUpdate()"
+        >
           Actualizar
         </button>
       </div>
       <div class="col-sm-6 col-6">
-        <button class="btn btn-md btn-outline-primary" routerLink="/#">
+        <button class="btn btn-md btn-outline-primary" [routerLink]="'/'">
           Volver sin cambios
         </button>
       </div>

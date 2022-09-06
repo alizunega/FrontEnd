@@ -1,5 +1,6 @@
+
 <!-- id es para que tome el link interno del footer -->
-<div class="container-fluid" id="ir-skills" *ngIf="skills">
+<div class="container-fluid" id="ir-skills">
   <div class="list-group-flush w-90">
     <div class="row">
       <div class="col text-start">
@@ -16,7 +17,7 @@
         </button>
       </div>
     </div>
-    <div class="row" *ngIf="skills.length == 0">
+    <div class="row" *ngIf="skills?.length == 0">
       <p style="color: rgb(196, 162, 162)">No hay skills para mostrar</p>
     </div>
 

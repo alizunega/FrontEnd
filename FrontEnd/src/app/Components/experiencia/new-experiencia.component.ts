@@ -10,10 +10,10 @@ import { Experiencia } from 'src/app/model/experiencia';
 })
 export class NewExperienciaComponent implements OnInit {
   //inicializa vacio cada uno de los inputs
-  nombreExpe: string = '';
-  descripcionExpe: string = '';
-  fechainicio: string = '';
-  fechafin: string = '';
+  nombreExpe: string;
+  descripcionExpe: string;
+  fechainicio: string;
+  fechafin: string = 'Actualidad';
 
   constructor(
     private sExperiencia: SExperienciaService,
@@ -29,9 +29,32 @@ export class NewExperienciaComponent implements OnInit {
       this.fechainicio,
       this.fechafin
     );
+    // Ejemplo de JavaScript inicial para deshabilitar el envío de formularios si hay campos no válidos
+    (function () {
+      'use strict';
 
-    this.sExperiencia.save(expe).subscribe((response) => {
-      alert("Experiencia añadida");
+      // Obtener todos los formularios a los que queremos aplicar estilos de validación de Bootstrap personalizados
+      var forms = document.querySelectorAll('.needs-validation');
+
+      // Bucle sobre ellos y evitar el envío
+      Array.prototype.slice.call(forms).forEach(function (form) {
+        form.addEventListener(
+          'submit',
+          function (event: any): void{
+            if (!form.checkValidity()) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+
+            form.classList.add('was-validated');
+          },
+          false
+        );
+      });
+    })();
+
+    this.sExperiencia.save(expe).subscribe((data) => {
+      alert('Experiencia añadida');
       this.sExperiencia.lista();
       this.router.navigate(['']);
     });

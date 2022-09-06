@@ -66,6 +66,7 @@ import { EditSkillComponent } from './Components/skills/editskill.component';
       // valores por defecto por si no ingresa valores en formulario
       radius: 100,
       maxPercent: 100,
+      startFromZero: true,
       outerStrokeWidth: 14,
       innerStrokeWidth: 8,
       outerStrokeColor: "'#677E9B'",
