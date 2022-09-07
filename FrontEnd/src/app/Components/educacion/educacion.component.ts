@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { EducacionService } from 'src/app/service/educacion.service';
 import { TokenService } from 'src/app/service/token.service';
 import { Educacion } from 'src/app/model/educacion';
-import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-educacion',
