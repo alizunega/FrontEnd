@@ -2,6 +2,7 @@
 @media screen and (min-width:800px) {
     .container-fluid {
         width: 60%;
+        top:20vh;
         margin: 25%;
         padding: 2rem;
         align-items: center;

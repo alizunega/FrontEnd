@@ -12,7 +12,8 @@ export class NewProyectoComponent implements OnInit {
   nombreProyecto: string;
   descripcionProyecto: string;
   linkproyecto: string;
-  imgproyecto: string;
+  //imagen por default
+  imgproyecto: string = '../../../assets/proyectos/proyectoDefault.png';
 
   constructor(private proyService: ProyectoService, private router: Router) {}
 
@@ -25,7 +26,7 @@ export class NewProyectoComponent implements OnInit {
       this.imgproyecto,
       this.linkproyecto
     );
-    
+
     //deshabilitar el envío de formularios si hay campos no válidos
     (function () {
       'use strict';

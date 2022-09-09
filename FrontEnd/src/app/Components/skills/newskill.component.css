@@ -2,7 +2,7 @@
 @media screen and (min-width:800px) {
     .container-fluid {
         width: 60%;
-        margin: 25%;
+        margin: auto;
         padding: 2rem;
         align-items: center;
         justify-content: center;
@@ -18,4 +18,8 @@
 
 form {
     outline: 1px solid rgb(108, 108, 129);
+}
+
+input[type=color] {
+    width: 10rem;
 }

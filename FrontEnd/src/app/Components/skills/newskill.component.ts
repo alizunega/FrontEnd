@@ -10,7 +10,7 @@ import { SkillsService } from 'src/app/service/skills.service';
 })
 export class NewSkillComponent implements OnInit {
   nombreSkill: string;
-  imgsrc: string;
+  imgsrc: string = '../../../assets/hard skills/defaultSkills.png';
   colorInterno: string = '#9EA4AB';
   colorExterno: string = '#677E9B';
   porcentaje: number;

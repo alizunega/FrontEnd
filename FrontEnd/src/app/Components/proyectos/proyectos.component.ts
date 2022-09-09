@@ -31,7 +31,8 @@ export class ProyectosComponent implements OnInit {
     this.proService.lista().subscribe((data) => {
       this.proyectos = data;
     });
-  }
+    }
+
   delete(id: number): void {
     if (id != undefined) {
       this.proService.delete(id).subscribe((success) => {

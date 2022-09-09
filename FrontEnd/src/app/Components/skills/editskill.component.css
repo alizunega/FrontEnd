@@ -1,4 +1,3 @@
-
 @media screen and (min-width:800px) {
     .container-fluid {
         width: 60%;
@@ -18,4 +17,8 @@
 
 form {
     outline: 1px solid rgb(108, 108, 129);
+}
+
+input[type=color] {
+    width: 10rem;
 }
