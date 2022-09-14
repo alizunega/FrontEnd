@@ -15,9 +15,9 @@ export class NewSkillComponent implements OnInit {
   colorExterno: string = '#677E9B';
   porcentaje: number;
 
-  constructor(private skillService: SkillsService, private router: Router) {}
+  constructor(private skillService: SkillsService, private router: Router) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   onCreate(): void {
     const skill = new Skills(
@@ -27,14 +27,25 @@ export class NewSkillComponent implements OnInit {
       this.colorInterno,
       this.colorExterno
     );
+
+
+    //habilita el input si se selecciona para agregar link de imagen 
+    function comprobar(obj: any) {
+      if (obj.checked) {
+        document.getElementById('link').style.display = "";
+      } else {
+        document.getElementById('link').style.display = "none";
+      }
+    }
+
     //deshabilitar el envío de formularios si hay campos no válidos
     (function () {
       'use strict';
 
-      // Obtener todos los formularios a los que queremos aplicar estilos de validación de Bootstrap personalizados
+      // obtener todos los formularios a validar
       var forms = document.querySelectorAll('.needs-validation');
 
-      // Bucle sobre ellos y evitar el envío
+      // bucle sobre ellos y evitar el envío
       Array.prototype.slice.call(forms).forEach(function (form) {
         form.addEventListener(
           'submit',
@@ -51,9 +62,9 @@ export class NewSkillComponent implements OnInit {
       });
     })();
 
-    //guarda nueva skill
+    //guarda nueva skill una vez chequeada validacion de campos
     this.skillService.save(skill).subscribe((response) => {
-      alert('Se añadió correctamente');
+      alert('Skill añadida correctamente');
       this.skillService.lista();
       this.router.navigate(['']);
     });

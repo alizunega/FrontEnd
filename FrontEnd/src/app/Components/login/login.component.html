@@ -10,48 +10,31 @@
         <form #f="ngForm" novalidate>
           <div class="card-body">
             <div class="form-outline mb-4">
-              <input
-                type="text"
-                id="nombreUsuario"
-                name="nombreUsuario"
-                class="form-control form-control-md"
-                placeholder="Ingrese un usuario válido"
-                [(ngModel)]="nombreUsuario"
-                required
-              />
+              <input type="text" id="nombreUsuario" name="nombreUsuario" class="form-control form-control-md"
+                placeholder="Ingrese usuario" [(ngModel)]="nombreUsuario" required />
             </div>
-    
+
             <div class="form-outline mb-3">
-              <input
-                type="password"
-                name="password"
-                id="password"
-                class="form-control form-control-md"
-                placeholder="Ingrese una contraseña válida"
-                [(ngModel)]="password"
-                required
-              />
+              <input type="password" name="password" id="password" class="form-control form-control-md"
+                placeholder="Ingrese contraseña" [(ngModel)]="password" required />
             </div>
-            <div class="text-center text-lg-start mt-4 pt-2">
-              <button
-                type="submit"
-                name="submit"
-                class="btn btn-success btn-md py-2"
-                (click)="onLogin()"
-              >
-                Ingreso
-              </button>
+            <div class="row">
+              <div class="col text-center text-lg-start mt-4 pt-2">
+                <button type="submit" name="submit" class="btn btn-success btn-md py-2" (click)="onLogin()">
+                  Ingresar
+                </button>
+              </div>
+              <div class="col text-center text-lg-start mt-4 pt-2 px-3">
+                <a href="/#" class="btn btn-secondary btn-md px-2">Volver</a>
+              </div>
             </div>
-          </div>
-          <div class="text-center text-lg-start mt-4 pt-2 px-3">
-            <a href="/#" class="btn btn-secondary btn-md px-2">Volver a Inicio</a>
           </div>
         </form>
-        
+
         <div class="card-footer text-muted mt-1 text-center">Copyright © 2022</div>
       </div>
     </div>
     <div class="col"></div>
   </div>
-  
+
 </div>

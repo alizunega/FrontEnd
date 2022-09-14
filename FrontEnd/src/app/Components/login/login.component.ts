@@ -48,6 +48,7 @@ export class LoginComponent implements OnInit {
         this.isLogged = false;
         this.isLogginFail = true;
         this.errMsj = err.error.mensaje;
+        alert("Credenciales incorrectas");
         console.log(this.errMsj);
       }
     );

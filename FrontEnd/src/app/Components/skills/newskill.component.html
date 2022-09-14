@@ -5,19 +5,38 @@
         <label for="nombreSkill" class="form-label">Tìtulo:</label>
       </div>
       <div class="col-12 col-md">
-        <input
-          type="text"
-          id="nombreSkill"
-          name="nombreSkill"
-          [(ngModel)]="nombreSkill"
-          required
-          class="form-control"
-        />
+        <input type="text" id="nombreSkill" name="nombreSkill" [(ngModel)]="nombreSkill" required
+          class="form-control" />
         <div class="invalid-feedback">Campo obligatorio.</div>
         <div class="valid-feedback">Campo completo.</div>
       </div>
     </div>
-    <div class="row">
+    <div class="row g-0 p-0">
+      <div class="col g-0 p-0">
+        <div class="row">
+          <div class="col-1">
+            <input class="form-control form-check-input" name="chec" type="checkbox" id="chec"
+              onChange="comprobar(this);" />
+          </div>
+          <div class="col-11">
+            <label class="form-label form-check-label" for="chec">Deseo agregar una imagen:</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label class="form-label" for="imgsrc">Imagen (link):</label>
+          </div>
+          <div class="col-12 col-md text-start">
+            <input class="form-control" type="text" id="imgsrc" name="imgsrc" style="display:none" [(ngModel)]="imgsrc"
+              required />
+          </div>
+          <div class="invalid-feedback">Campo obligatorio.</div>
+          <div class="valid-feedback">Campo completo.</div>
+        </div>
+      </div>
+
+    </div>
+    <!-- 
       <div class="col-12 col-md-4">
         <label for="imgsrc" class="form-label">Imagen (link):</label>
       </div>
@@ -30,22 +49,19 @@
           name="imgsrc"
           [(ngModel)]="imgsrc"
         />
+        
         <div class="invalid-feedback">Campo obligatorio.</div>
         <div class="valid-feedback">Campo completo.</div>
       </div>
     </div>
+     -->
     <div class="row">
       <div class="col-6">
         <label for="colorInterno" class="form-label">Color Interno:</label>
       </div>
       <div class="col-6">
-        <input
-          type="color"
-          class="form-control form-control-color"
-          name="colorInterno"
-          id="colorInterno"
-          [(ngModel)]="colorInterno"
-        />
+        <input type="color" class="form-control form-control-color" name="colorInterno" id="colorInterno"
+          [(ngModel)]="colorInterno" />
       </div>
     </div>
     <div class="row">
@@ -53,13 +69,8 @@
         <label for="colorExterno" class="form-label">Color externo:</label>
       </div>
       <div class="col-6">
-        <input
-          type="color"
-          class="form-control form-control-color"
-          name="colorExterno"
-          id="colorExterno"
-          [(ngModel)]="colorExterno"
-        />
+        <input type="color" class="form-control form-control-color" name="colorExterno" id="colorExterno"
+          [(ngModel)]="colorExterno" />
       </div>
     </div>
     <div class="row">
@@ -67,16 +78,8 @@
         <label for="porcentaje" class="form-label">Porcentaje:</label>
       </div>
       <div class="col-12 col-md-2">
-        <input
-          type="number"
-          min="0"
-          max="100"
-          id="porcentaje"
-          name="porcentaje"
-          [(ngModel)]="porcentaje"
-          required
-          class="form-control"
-        />
+        <input type="number" min="0" max="100" id="porcentaje" name="porcentaje" [(ngModel)]="porcentaje" required
+          class="form-control" />
         <div class="invalid-feedback">Campo obligatorio. Max. 100.</div>
         <div class="valid-feedback">Campo completo.</div>
       </div>
@@ -93,4 +96,3 @@
     </div>
   </form>
 </div>
-
