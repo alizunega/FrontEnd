@@ -14,10 +14,22 @@ export class NewSkillComponent implements OnInit {
   colorInterno: string = '#9EA4AB';
   colorExterno: string = '#677E9B';
   porcentaje: number;
+  isCheck: boolean = true;
 
-  constructor(private skillService: SkillsService, private router: Router) { }
+  constructor(private skillService: SkillsService, private router: Router) {}
+  
+  //habilita el input si se selecciona para agregar link de imagen
+  public comprobar() {
+    if (this.isCheck) {
+      document.getElementById('imgsrc').style.display = '';
+      this.isCheck = false;
+    }else{
+      document.getElementById('imgsrc').style.display = 'none';
+      this.isCheck = true;
+    }
+  }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {}
 
   onCreate(): void {
     const skill = new Skills(
@@ -27,16 +39,6 @@ export class NewSkillComponent implements OnInit {
       this.colorInterno,
       this.colorExterno
     );
-
-
-    //habilita el input si se selecciona para agregar link de imagen 
-    function comprobar(obj: any) {
-      if (obj.checked) {
-        document.getElementById('link').style.display = "";
-      } else {
-        document.getElementById('link').style.display = "none";
-      }
-    }
 
     //deshabilitar el envío de formularios si hay campos no válidos
     (function () {

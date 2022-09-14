@@ -7,7 +7,8 @@
 }
 
 .card-header, .card-footer {
-    background-color: #886a94;
+    background-color: #dddcdd;
+    font-weight: bold;
 }
 
 .card {

@@ -11,12 +11,13 @@
         <div class="valid-feedback">Campo completo.</div>
       </div>
     </div>
+    <!-- prueba ... checkbox que permite agregar un link para imagen si lo desea 
     <div class="row g-0 p-0">
       <div class="col g-0 p-0">
         <div class="row">
           <div class="col-1">
             <input class="form-control form-check-input" name="chec" type="checkbox" id="chec"
-              onChange="comprobar(this);" />
+            (onChange)=comprobar()/>
           </div>
           <div class="col-11">
             <label class="form-label form-check-label" for="chec">Deseo agregar una imagen:</label>
@@ -28,7 +29,7 @@
           </div>
           <div class="col-12 col-md text-start">
             <input class="form-control" type="text" id="imgsrc" name="imgsrc" style="display:none" [(ngModel)]="imgsrc"
-              required />
+              required/>
           </div>
           <div class="invalid-feedback">Campo obligatorio.</div>
           <div class="valid-feedback">Campo completo.</div>
@@ -36,25 +37,21 @@
       </div>
 
     </div>
-    <!-- 
+    -->
+    <!-- comportamiento basico de la carga de imagen de skill -->
+    <div class="row">
       <div class="col-12 col-md-4">
         <label for="imgsrc" class="form-label">Imagen (link):</label>
       </div>
       <div class="col-12 col-md">
-        <input
-          type="text"
-          required
-          class="form-control"
-          id="imgsrc"
-          name="imgsrc"
-          [(ngModel)]="imgsrc"
-        />
-        
+        <input type="text" required class="form-control" id="imgsrc" name="imgsrc" [(ngModel)]="imgsrc" />
+
         <div class="invalid-feedback">Campo obligatorio.</div>
         <div class="valid-feedback">Campo completo.</div>
       </div>
     </div>
-     -->
+
+
     <div class="row">
       <div class="col-6">
         <label for="colorInterno" class="form-label">Color Interno:</label>
