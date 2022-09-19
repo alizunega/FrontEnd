@@ -14,7 +14,7 @@ export class EditSkillComponent implements OnInit {
     private skillService: SkillsService,
     private router: Router,
     private activatedRouter: ActivatedRoute
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
