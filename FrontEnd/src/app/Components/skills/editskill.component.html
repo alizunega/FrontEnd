@@ -5,14 +5,8 @@
         <label for="nombreSkill" class="form-label">Tìtulo:</label>
       </div>
       <div class="col-12 col-md">
-        <input
-          type="text"
-          id="nombreSkill"
-          name="nombreSkill"
-          [(ngModel)]="skill.nombreSkill"
-          required
-          class="form-control"
-        />
+        <input type="text" id="nombreSkill" name="nombreSkill" [(ngModel)]="skill.nombreSkill" required
+          class="form-control" />
         <div class="invalid-feedback">Campo obligatorio.</div>
         <div class="valid-feedback">Campo completo.</div>
       </div>
@@ -22,14 +16,7 @@
         <label for="imgsrc" class="form-label">Imagen (link):</label>
       </div>
       <div class="col-12 col-md">
-        <input
-          type="text"
-          required
-          class="form-control"
-          id="imgsrc"
-          name="imgsrc"
-          [(ngModel)]="skill.imgsrc"
-        />
+        <input type="text" required class="form-control" id="imgsrc" name="imgsrc" [(ngModel)]="skill.imgsrc" />
         <div class="invalid-feedback">Campo obligatorio.</div>
         <div class="valid-feedback">Campo completo.</div>
       </div>
@@ -39,13 +26,8 @@
         <label for="colorInterno" class="form-label">Color Interno:</label>
       </div>
       <div class="col-6">
-        <input
-          type="color"
-          class="form-control form-control-color"
-          name="colorInterno"
-          id="colorInterno"
-          [(ngModel)]="skill.colorInterno"
-        />
+        <input type="color" class="form-control form-control-color" name="colorInterno" id="colorInterno"
+          [(ngModel)]="skill.colorInterno" />
       </div>
     </div>
     <div class="row">
@@ -53,13 +35,8 @@
         <label for="colorExterno" class="form-label">Color externo:</label>
       </div>
       <div class="col-6">
-        <input
-          type="color"
-          class="form-control form-control-color"
-          name="colorExterno"
-          id="colorExterno"
-          [(ngModel)]="skill.colorExterno"
-        />
+        <input type="color" class="form-control form-control-color" name="colorExterno" id="colorExterno"
+          [(ngModel)]="skill.colorExterno" />
       </div>
     </div>
     <div class="row">
@@ -67,16 +44,8 @@
         <label for="porcentaje" class="form-label">Porcentaje:</label>
       </div>
       <div class="col-12 col-md">
-        <input
-          type="number"
-          min="0"
-          max="100"
-          id="porcentaje"
-          name="porcentaje"
-          [(ngModel)]="skill.porcentaje"
-          required
-          class="form-control"
-        />
+        <input type="number" min="0" max="100" id="porcentaje" name="porcentaje" [(ngModel)]="skill.porcentaje" required
+          class="form-control" />
         <div class="invalid-feedback">Campo obligatorio. Max. 100.</div>
         <div class="valid-feedback">Campo completo.</div>
       </div>

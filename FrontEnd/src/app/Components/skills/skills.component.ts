@@ -16,7 +16,7 @@ export class SkillsComponent implements OnInit {
     private skillsService: SkillsService,
     private tokenService: TokenService,
     private router: Router
-  ) {}
+  ) { }
 
   isLogged = false;
 
