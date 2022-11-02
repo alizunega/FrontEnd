@@ -23,11 +23,11 @@
 
     <div class="list-group-item m-auto">
       <!--  -->
-      <div class="row row-cols-auto text-center m-auto">
+      <div class="row row-cols-auto text-center m-auto ">
         <ul>
           <li *ngFor="let Skill of skills">
             <div class="col-12 col-sm my-2">
-              <div class="row">
+              <div class="row m-auto">
                 <circle-progress
                   [percent]="Skill.porcentaje"
                   [outerStrokeColor]="Skill.colorExterno"
@@ -37,7 +37,7 @@
                 ></circle-progress>
               </div>
               <div class="row text-center">
-                <p>{{ Skill.nombreSkill }}</p>
+                <p class="fw-bold">{{ Skill.nombreSkill }}</p>
               </div>
               <div class="row text-center">
                 <div class="col-6">
