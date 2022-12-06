@@ -9,7 +9,7 @@ import { NuevoUsuario } from '../model/nuevo-usuario';
   providedIn: 'root',
 })
 export class AuthService {
-  private authURL = 'https://portfolioap-2022.herokuapp.com/auth/';
+  private authURL = 'https://backend-ap-2022-alizunega.koyeb.app/auth/';
 
   constructor(private httpClient: HttpClient) { }
 

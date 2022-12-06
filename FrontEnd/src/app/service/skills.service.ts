@@ -7,7 +7,7 @@ import { Skills } from '../model/skills';
   providedIn: 'root',
 })
 export class SkillsService {
-  private URL = 'https://portfolioap-2022.herokuapp.com/skills';
+  private URL = 'https://backend-ap-2022-alizunega.koyeb.app/skills';
 
   constructor(private http: HttpClient) {}
 

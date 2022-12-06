@@ -7,7 +7,7 @@ import { Persona } from '../model/persona.model';
   providedIn: 'root',
 })
 export class PersonaService {
-  private URL = 'https://portfolioap-2022.herokuapp.com/persona';
+  private URL = 'https://backend-ap-2022-alizunega.koyeb.app/persona';
 
   constructor(private http: HttpClient) {}
 

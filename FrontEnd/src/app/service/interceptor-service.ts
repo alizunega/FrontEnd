@@ -12,7 +12,7 @@ import { TokenService } from './token.service';
   providedIn: 'root',
 })
 export class InterceptorService {
-  constructor(private tokenService: TokenService) {}
+  constructor(private tokenService: TokenService) { }
 
   intercept(
     req: HttpRequest<any>,

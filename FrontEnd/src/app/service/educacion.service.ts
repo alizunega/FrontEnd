@@ -7,7 +7,7 @@ import { Educacion } from '../model/educacion';
   providedIn: 'root',
 })
 export class EducacionService {
-  private URL = 'https://portfolioap-2022.herokuapp.com/educacion';
+  private URL = 'https://backend-ap-2022-alizunega.koyeb.app/educacion';
 
   constructor(private http: HttpClient) {}
 
