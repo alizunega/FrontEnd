@@ -8,7 +8,7 @@ import { Experiencia } from '../model/experiencia';
   providedIn: 'root',
 })
 export class SExperienciaService {
-  private URL = 'https://backend-ap-2022-alizunega.koyeb.app/experiencia';
+  private URL = 'https://backend-alizunega.koyeb.app/experiencia';
 
   constructor(private http: HttpClient) {}
 

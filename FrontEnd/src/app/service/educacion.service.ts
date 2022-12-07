@@ -7,7 +7,7 @@ import { Educacion } from '../model/educacion';
   providedIn: 'root',
 })
 export class EducacionService {
-  private URL = 'https://backend-ap-2022-alizunega.koyeb.app/educacion';
+  private URL = 'https://backend-alizunega.koyeb.app/educacion';
 
   constructor(private http: HttpClient) {}
 

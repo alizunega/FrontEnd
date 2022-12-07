@@ -7,7 +7,7 @@ import { Proyecto } from '../model/proyecto';
   providedIn: 'root',
 })
 export class ProyectoService {
-  private URL = 'https://backend-ap-2022-alizunega.koyeb.app/proyecto';
+  private URL = 'https://backend-alizunega.koyeb.app/proyecto';
 
   constructor(private http: HttpClient) {}
 
