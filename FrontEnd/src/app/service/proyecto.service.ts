@@ -9,7 +9,7 @@ import { Proyecto } from '../model/proyecto';
 export class ProyectoService {
   private URL = 'https://backend-alizunega.koyeb.app/proyecto';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   public lista(): Observable<Proyecto[]> {
     return this.http.get<Proyecto[]>(`${this.URL}/lista`);

@@ -10,7 +10,7 @@ import { Experiencia } from '../model/experiencia';
 export class SExperienciaService {
   private URL = 'https://backend-alizunega.koyeb.app/experiencia';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   public lista(): Observable<Experiencia[]> {
     return this.http.get<Experiencia[]>(`${this.URL}/lista`);

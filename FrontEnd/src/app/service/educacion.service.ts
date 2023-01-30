@@ -9,7 +9,7 @@ import { Educacion } from '../model/educacion';
 export class EducacionService {
   private URL = 'https://backend-alizunega.koyeb.app/educacion';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   public lista(): Observable<Educacion[]> {
     return this.http.get<Educacion[]>(`${this.URL}/lista`);

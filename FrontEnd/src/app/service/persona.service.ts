@@ -9,7 +9,7 @@ import { Persona } from '../model/persona.model';
 export class PersonaService {
   private URL = 'https://backend-alizunega.koyeb.app/persona';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   public getPersona(): Observable<Persona> {
     return this.http.get<Persona>(`${this.URL}/traer`);
