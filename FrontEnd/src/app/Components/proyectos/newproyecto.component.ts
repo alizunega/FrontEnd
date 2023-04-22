@@ -15,9 +15,9 @@ export class NewProyectoComponent implements OnInit {
   //imagen por default
   imgproyecto: string = '../../../assets/proyectos/proyectoDefault.png';
 
-  constructor(private proyService: ProyectoService, private router: Router) {}
+  constructor(private proyService: ProyectoService, private router: Router) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   onCreate(): void {
     const proyecto = new Proyecto(
