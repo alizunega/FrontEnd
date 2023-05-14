@@ -1,33 +1,38 @@
-@media screen and (max-width: 500px) { 
-    .foto-perfil{
+@media screen and (max-width: 500px) {
+    .foto-perfil {
         width: 20%;
         height: 10%;
         margin: auto;
         display: block;
-    } 
-    #encabezado{
+        border-radius: 50%;
+    }
+
+    #encabezado {
         display: flex;
         flex-direction: column;
         text-align: center;
         justify-content: center;
     }
-    h3{
+
+    h3 {
         margin-bottom: 0.3rem;
         padding-bottom: 0.1rem;
     }
-    button{
+
+    button {
         font-size: 10px;
     }
 }
 
-.foto-perfil{
+.foto-perfil {
     width: 100%;
     max-width: 200px;
     height: auto;
     box-shadow: 0.6rem 0.6rem 3rem rgb(104, 102, 102);
+    border-radius: 50%;
 }
 
-h4,h3{
+h4,
+h3 {
     padding-top: 1rem;
 }
-

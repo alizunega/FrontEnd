@@ -16,7 +16,7 @@ export class ExperienciaComponent implements OnInit {
     private sExperiencia: SExperienciaService,
     private tokenService: TokenService,
     private router: Router
-  ) {}
+  ) { }
 
   isLogged = false;
 
