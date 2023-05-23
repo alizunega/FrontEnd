@@ -5,11 +5,7 @@
         <h1>Proyectos</h1>
       </div>
       <div class="col text-end">
-        <button
-          routerLink="/newproyecto"
-          class="btn btn-sm btn-outline-secondary bi bi-plus-square"
-          *ngIf="isLogged"
-        >
+        <button routerLink="/newproyecto" class="btn btn-sm btn-outline-secondary bi bi-plus-square" *ngIf="isLogged">
           Agregar
         </button>
       </div>
@@ -20,40 +16,27 @@
       <div class="card w-3">
         <ul>
           <li class="list-group-item" *ngFor="let Proyecto of proyectos">
-            <img
-              class="card-img-top img-responsive img-thumbnail"
-              src="{{ Proyecto.imgproyecto }}"
-              alt="Imagen {{ Proyecto.nombreProyecto }}"
-            />
+            <img class="card-img-top img-responsive img-thumbnail" src="{{ Proyecto.imgproyecto }}"
+              alt="Imagen {{ Proyecto.nombreProyecto }}" />
 
             <div class="card-body">
               <h3 class="card-title">{{ Proyecto.nombreProyecto }}</h3>
               <p class="card-text">
                 {{ Proyecto.descripcionProyecto }}
               </p>
-              <a
-                href="{{ Proyecto.linkproyecto }}"
-                target="_blank"
-                class="btn btn-outline-secondary"
-                >Ir al proyecto <i class="bi bi-arrow-right-square-fill"></i
-              ></a>
+              <a href="{{ Proyecto.linkproyecto }}" target="_blank" class="btn btn-outline-secondary">Ir al proyecto <i
+                  class="bi bi-arrow-right-square-fill"></i></a>
             </div>
             <div class="row card-footer w-60">
               <div class="col text-end">
-                <button
-                  *ngIf="isLogged"
-                  class="bi bi-pencil btn btn-sm btn-outline-dark"
-                  routerLink="/editproyecto/{{ Proyecto.id }}"
-                >
+                <button *ngIf="isLogged" class="bi bi-pencil btn btn-sm btn-outline-dark"
+                  routerLink="/editproyecto/{{ Proyecto.id }}">
                   Editar
                 </button>
               </div>
               <div class="col text-start">
-                <button
-                  *ngIf="isLogged"
-                  class="bi bi-trash3-fill btn btn-sm btn-outline-danger"
-                  (click)="delete(Proyecto.id)"
-                >
+                <button *ngIf="isLogged" class="bi bi-trash3-fill btn btn-sm btn-outline-danger"
+                  (click)="delete(Proyecto.id)">
                   Borrar
                 </button>
               </div>

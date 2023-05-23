@@ -16,7 +16,7 @@ export class ProyectosComponent implements OnInit {
     private proService: ProyectoService,
     private tokenService: TokenService,
     private router: Router
-  ) {}
+  ) { }
   isLogged = false;
 
   ngOnInit(): void {
@@ -31,7 +31,7 @@ export class ProyectosComponent implements OnInit {
     this.proService.lista().subscribe((data) => {
       this.proyectos = data;
     });
-    }
+  }
 
   delete(id: number): void {
     if (id != undefined) {

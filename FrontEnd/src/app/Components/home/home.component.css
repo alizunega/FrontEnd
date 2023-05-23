@@ -1,7 +1,19 @@
-.container-fluid{
+.container-fluid {
     outline: none;
     width: 100vw;
     padding: 0;
     margin: 0;
     background-color: rgb(243, 246, 248);
+}
+
+.ir-arriba {
+    display: block;
+    background-repeat: no-repeat;
+    font-size: 2em;
+    color: black;
+    cursor: pointer;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 2;
 }
